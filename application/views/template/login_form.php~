@@ -1,5 +1,6 @@
 <html>
 <head>
+
 <?php 
 	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
 ?>
@@ -8,7 +9,7 @@
 <style type="text/css">
 *{
 	font-family:fantasy;
-	text-align:left;
+	text-align:center;
 	color:#2B3856;
 	margin-right:auto;
 	margin-left:auto;
@@ -18,33 +19,36 @@
 body{
 	background-image: url('<?php echo $bg; ?>'); 
 }
+
 form{
 	margin: 0px auto;
 	float:center;
 	position:relative;
 }
 
+a{
+	color:blue;
+}
+
+
 </style>
-<body> <div align="left"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395342334.png" /></div>
-<!--<div id="login_form" style="margin-right:auto; margin-left:auto;">
-	<!--<h1>login_form</h1>
-	-->
-<div align="center">
+
+<body> 
+<div align="left">
+	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395342334.png" />
+</div>
+
 <?php 
-	echo "<p> Login </p>";
+	echo "<p><b>Login:</p>";
 	echo form_open('login/validate_credentials');
 	echo form_input('login',set_value('login'));
-?>
-<br>
-<?php	
-	echo "<p> Password </p>";
+	echo "<p> Password: </b></p>";
 	echo form_password('password',set_value('password'));
+	echo "<br><br>";
 	echo form_submit('submit', 'Login');
-	echo anchor('login/signup', 'Create Account')
-	echo "<p>" . anchor('candystore/index','Back') . " | </p>";	
-	?>
-</div>
-<section>
-<!--
-</div>-->
-</body
+	echo "<br><br>";
+	echo "New User? Click " . anchor('login/signup', 'Here') . " to register!";
+	
+?>
+
+</body>

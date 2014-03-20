@@ -25,7 +25,7 @@ p{
 
 </head>
 <body> 
- <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395344671.png" /></div>
+<div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395344671.png" /></div>
 
 <?php 
 echo "<p>" . anchor('candystore/index','Back') . "</p>";

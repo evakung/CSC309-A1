@@ -1,11 +1,10 @@
-<!--
-<h2>Edit dat bitch</h2>
--->
 <html>
 <head>
+
 <?php 
 	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
 ?>
+
 </head>
 
 <style type="text/css">
@@ -27,12 +26,12 @@ input{
 
 </style>
 
- <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395305414.png" /></div>
+<div align="center">
+	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395305414.png" />
+</div>
+
 <?php 
-	
-	
 	echo form_open("customer/update/$customer->id");
-	
 	echo form_label('First Name:'); 
 	echo form_error('first');
 	echo form_input('first',$customer->first,"required");
@@ -63,9 +62,6 @@ input{
 ?>
 <br><br>
 <?php	
-
-	
-	
 	echo form_submit('submit', 'Save');
 	echo form_close();
 ?>	

@@ -26,8 +26,9 @@ color: red;
 }
 
 </style>
+
 <div align="center">
-<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395304735.png" />
+	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395304735.png" />
 </div>
 <?php 
 	echo form_open_multipart('customer/create');
@@ -64,7 +65,7 @@ color: red;
 	echo form_submit('submit', 'Create');
 	echo form_close();
 ?>
-
+<p> <span class="red">*</span> = required fields </p>
 <br><br>
 
 <?php 

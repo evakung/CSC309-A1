@@ -26,32 +26,34 @@ color: red;
 }
 
 </style>
+
 <div align="center">
-<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395304735.png" />
+	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395304735.png" />
 </div>
+<p> <span class="red">*</span> = required fields </p>
 <?php 
 	echo form_open_multipart('customer/create');
 		
 	echo form_label('First Name<span class="red">*</span>:'); 
 	echo form_error('first');
 	echo form_input('first',set_value('first'),"required");
-?><br><?php
+
 	echo form_label('Last Name<span class="red">*</span>:');
 	echo form_error('last');
 	echo form_input('last',set_value('last'),"required");
-?><br><br><?php	
+
 	echo form_label('Login Username<span class="red">*</span>:');
 	echo form_error('login');
 	echo form_input('login',set_value('login'),"required");
-?><br><br><?php	
+
 	echo form_label('Password<span class="red">*</span>:');
 	echo form_error('password');
 	echo form_password('password',set_value('password'),"required");
-?><br><br><?php
+
 	echo form_label('Confirm Password<span class="red">*</span>:');
 	echo form_error('passwordconf');	
 	echo form_password('passwordconf',set_value('password'),"required");
-?><br><br><?php
+
 	echo form_label('Email<span class="red">*</span>:');
 	echo form_error('email');
 	echo form_input('email',set_value('email'),"required");
@@ -64,7 +66,7 @@ color: red;
 	echo form_submit('submit', 'Create');
 	echo form_close();
 ?>
-
+<p> <span class="red">*</span> = required fields </p>
 <br><br>
 
 <?php 
