@@ -26,8 +26,9 @@ color: red;
 }
 
 </style>
+
 <div align="center">
-<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395304735.png" />
+	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395304735.png" />
 </div>
 <?php 
 	echo form_open_multipart('customer/create');

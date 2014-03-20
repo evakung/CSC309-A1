@@ -6,24 +6,24 @@
 </head>
 
 <style type="text/css">
-*{
-	font-family:fantasy;
-	text-align:center;
-	color:#2B3856;
-}
+	*{
+		font-family:fantasy;
+		text-align:center;
+		color:#2B3856;
+	}
 
 
-body{
-	background-image: url('<?php echo $bg; ?>'); 
-}
+	body{
+		background-image: url('<?php echo $bg; ?>'); 
+	}
 
-input{ 
-	display: block;
-	margin: 0px auto;
-}
-.red {
-color: red;
-}
+	input{ 
+		display: block;
+		margin: 0px auto;
+	}
+	.red {
+	color: red;
+	}
 
 </style>
 <div align="center">
@@ -35,23 +35,23 @@ color: red;
 	echo form_label('First Name<span class="red">*</span>:'); 
 	echo form_error('first');
 	echo form_input('first',set_value('first'),"required");
-?><br><?php
+
 	echo form_label('Last Name<span class="red">*</span>:');
 	echo form_error('last');
 	echo form_input('last',set_value('last'),"required");
-?><br><br><?php	
+
 	echo form_label('Login Username<span class="red">*</span>:');
 	echo form_error('login');
 	echo form_input('login',set_value('login'),"required");
-?><br><br><?php	
+
 	echo form_label('Password<span class="red">*</span>:');
 	echo form_error('password');
 	echo form_password('password',set_value('password'),"required");
-?><br><br><?php
+
 	echo form_label('Confirm Password<span class="red">*</span>:');
 	echo form_error('passwordconf');	
 	echo form_password('passwordconf',set_value('password'),"required");
-?><br><br><?php
+
 	echo form_label('Email<span class="red">*</span>:');
 	echo form_error('email');
 	echo form_input('email',set_value('email'),"required");
