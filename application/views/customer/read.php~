@@ -23,7 +23,7 @@ input{
 }
 
 </style>
- <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395307027.png" /></div>
+
 <h2>here is your dirty bitch</h2>
 <?php 
 	echo "<p>" . anchor('customer/index','Back') . "</p>";

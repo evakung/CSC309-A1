@@ -61,7 +61,7 @@ input{
 	echo form_error('email');
 	echo form_input('email',$customer->email,"required");
 ?>
-<br><br>
+<br>
 <?php	
 
 	
