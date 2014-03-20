@@ -26,9 +26,13 @@ form{
 	position:relative;
 }
 
-a:link{
+a{
 	color:blue;
 }
+a:hover{
+	color:white;
+}
+
 
 </style>
 

@@ -6,29 +6,31 @@
 </head>
 
 <style type="text/css">
-	*{
-		font-family:fantasy;
-		text-align:center;
-		color:#2B3856;
-	}
+*{
+	font-family:fantasy;
+	text-align:center;
+	color:#2B3856;
+}
 
 
-	body{
-		background-image: url('<?php echo $bg; ?>'); 
-	}
+body{
+	background-image: url('<?php echo $bg; ?>'); 
+}
 
-	input{ 
-		display: block;
-		margin: 0px auto;
-	}
-	.red {
-	color: red;
-	}
+input{ 
+	display: block;
+	margin: 0px auto;
+}
+.red {
+color: red;
+}
 
 </style>
+
 <div align="center">
-<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395304735.png" />
+	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395304735.png" />
 </div>
+<p> <span class="red">*</span> = required fields </p>
 <?php 
 	echo form_open_multipart('customer/create');
 		
@@ -64,7 +66,7 @@
 	echo form_submit('submit', 'Create');
 	echo form_close();
 ?>
-
+<p> <span class="red">*</span> = required fields </p>
 <br><br>
 
 <?php 

@@ -38,5 +38,6 @@ echo form_submit('submit', 'Confirm ');
 echo form_close();
 
 
+echo "<b><p>" . anchor('customer/index','<< Back') . "</p></b>";
+?>
 
-echo "<p>" . anchor('candystore/index','Back') . "</p>";

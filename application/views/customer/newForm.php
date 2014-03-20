@@ -65,7 +65,7 @@ color: red;
 	echo form_submit('submit', 'Create');
 	echo form_close();
 ?>
-
+<p> <span class="red">*</span> = required fields </p>
 <br><br>
 
 <?php 

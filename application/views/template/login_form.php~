@@ -26,9 +26,10 @@ form{
 	position:relative;
 }
 
-a:link{
+a{
 	color:blue;
 }
+
 
 </style>
 
@@ -43,7 +44,7 @@ a:link{
 	echo form_input('login',set_value('login'));
 	echo "<p> Password: </b></p>";
 	echo form_password('password',set_value('password'));
-	echo "<br>";
+	echo "<br><br>";
 	echo form_submit('submit', 'Login');
 	echo "<br><br>";
 	echo "New User? Click " . anchor('login/signup', 'Here') . " to register!";
