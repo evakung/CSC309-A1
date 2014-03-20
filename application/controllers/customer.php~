@@ -13,11 +13,11 @@ class Customer extends CI_Controller{
 	
 	function create(){
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('first', 'First Name', 'required|is_unique[customers.login]'); //Non overlapping usernames
+		$this->form_validation->set_rules('first', 'First Name', 'required|is_unique[customer.login]'); //Non overlapping usernames
 		$this->form_validation->set_rules('last', 'Last Name', 'required');
 		$this->form_validation->set_rules('login', 'Login', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|matches[passwordconf]'); //Added here, ->len(password) > 6, matches confirmation
-		$this->form_validation->set_rules('passwordconf', 'Confirm Password', 'required|min_length[6]|matches[password]'); //Added new password confirmation for register  same requirments 
+		$this->form_validation->set_rules('passwordconf', 'Confirm Password', 'required|min_length[6]'); //Added new password confirmation for register  same requirments 
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');
 		//Check email validity 
 
@@ -35,7 +35,6 @@ class Customer extends CI_Controller{
 			$this->customer_model->insert($customer);
 			$this->load->view('customer/successCustomer.php');
 		}else{
-			echo "here";
 			$this->load->view('customer/newForm.php');
 		}
 	}

@@ -47,8 +47,8 @@ input{
 	echo form_input('password',set_value('password'),"required");
 
 	echo form_label('Confirm Password');
-	echo form_error('password');
-	echo form_input('password',set_value('password'),"required");
+	echo form_error('passwordconf');
+	echo form_input('passwordconf',set_value('password'),"required");
 
 	echo form_label('Email');
 	echo form_error('email');
