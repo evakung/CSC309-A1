@@ -20,7 +20,7 @@ class Login extends CI_Controller{
 					);
 			
 			$this->session->set_userdata($data);
-			redirect('site/member_only');
+			redirect('candystore/index');
 		}
 		else{
 			$this->load->view('template/fail.php');
