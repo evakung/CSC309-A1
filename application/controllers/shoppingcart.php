@@ -10,9 +10,9 @@ class ShoppingCart extends CI_Controller{
 	}
 	
 	function view_shopping_cart(){
-		$cart = $this->session->userdata('cart');
-		$data['cart'] = $cart;		
-		$this->load->view("cart/main_cart.php", $data);
+			$cart = $this->session->userdata('cart');
+			$data['cart'] = $cart;
+			$this->load->view("cart/main_cart.php", $data);
 	}
 	
 	function update_cart(){
