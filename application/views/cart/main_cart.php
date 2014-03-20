@@ -31,7 +31,6 @@ p{
 </div>
 
 <?php 
-	echo form_open('shoppingcart/update_cart'); 
 	echo "<p>" . anchor('candystore/index','Back') . " | </p>";
 	echo "<p>" . anchor('shoppingcart/purchase','Final Order Details') . "</p>";
 ?>
@@ -47,6 +46,9 @@ p{
   <th style="text-align:right"></th>
 </tr>
 
+
+
+<?php if($cart_empty>0):?>
 <?php $i = 1; ?>
 
 <?php foreach ($cart as $items): ?>
@@ -76,7 +78,7 @@ p{
 	  <?php 
 	  		$name = $items['name'];
 	    	echo "<td>" . anchor("shoppingcart/edit_form/$name",'Edit') . "</td>";
-			echo "<td>" . anchor("shoppingcart/delete/$items",'Delete') . "</td>";
+			echo "<td>" . anchor("shoppingcart/delete_item/$name",'Delete') . "</td>";
 	?>
 	</tr>
 
@@ -84,6 +86,7 @@ p{
 
 <?php endforeach; ?>
 
+<?php endif;?>
 <tr>
   <td colspan="2"> </td>
   <td class="right"><strong>Total</strong>: $<?php echo $total; ?></td>
@@ -92,7 +95,6 @@ p{
 
 </table>
 
-<p><?php echo form_submit('', 'Update your Cart'); ?></p>
 </body>
 </html>
 

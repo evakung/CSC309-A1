@@ -13,11 +13,20 @@ class ShoppingCart extends CI_Controller{
 		return $this->session->userdata('cart');
 	}
 	
+
+	function empty_cart(){
+		$cart = $this->get_cart();
+		return count($cart);
+	}
+	
 	function view_shopping_cart(){
 			$cart = $this->session->userdata('cart');
+			
 			$data = array(
 					'cart'=>$cart,
-					'total'=>$this->get_total()
+					'total'=>$this->get_total(),
+					'cart_empty'=>$this->empty_cart()
+					
 			);
 			$this->load->view("cart/main_cart.php", $data);
 	}
@@ -168,7 +177,23 @@ class ShoppingCart extends CI_Controller{
 	}
 	
 	
-	function delete(){
+	function delete_item($product){
+		
+		$index=0;
+		$cart = $this->get_cart();
+		foreach ($cart as $items){
+ 			if($items['name'] == $product){ 
+ 				break;
+			}$index++;
+		}
+		unset($cart[$index]);
+		var_dump($cart);
+		$newCart = array_values($cart);
+		//$this->session->set_userdata('cart', $cart);
+		$this->session->set_userdata('cart', $newCart);
+		
+		redirect('candystore/index', 'refresh');
+				
 		
 	}
 
