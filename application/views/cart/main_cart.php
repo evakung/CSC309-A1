@@ -43,6 +43,8 @@ p{
   <th>Item name</th>
   <th style="text-align:right">Item Price</th>
   <th style="text-align:right">Sub-Total</th>
+  <th style="text-align:right"></th>
+  <th style="text-align:right"></th>
 </tr>
 
 <?php $i = 1; ?>
@@ -52,7 +54,7 @@ p{
 	<?php echo form_hidden($i.'[name]', $items['name']); ?>
 
 	<tr>
-	  <td><?php echo form_input(array('name' => $i.'[quantity]', 'value' => $items['quantity'], 'maxlength' => '3', 'size' => '5')); ?></td>
+	  <td><?php echo $items['quantity']; ?></td>
 	  <td>
 		<?php echo $items['name']; ?>
 
@@ -71,6 +73,11 @@ p{
 	  </td>
 	  <td style="text-align:right"><?php echo $this->cart->format_number($items['price']); ?></td>
 	  <td style="text-align:right">$<?php echo $this->cart->format_number($items['subtotal']); ?></td>
+	  <?php 
+	  		$name = $items['name'];
+	    	echo "<td>" . anchor("shoppingcart/edit_form/$name",'Edit') . "</td>";
+			echo "<td>" . anchor("shoppingcart/delete/$items",'Delete') . "</td>";
+	?>
 	</tr>
 
 <?php $i++; ?>
@@ -79,8 +86,8 @@ p{
 
 <tr>
   <td colspan="2"> </td>
-  <td class="right"><strong>Total</strong></td>
-  <td class="right">$<?php echo $this->cart->format_number($this->cart->total()); ?></td>
+  <td class="right"><strong>Total</strong>: $<?php echo $total; ?></td>
+  
 </tr>
 
 </table>

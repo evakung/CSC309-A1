@@ -46,16 +46,27 @@ body{
 </head>
 <body>
 
+	<?php if ($fromcart === true):?>
+		<?php echo form_open('shoppingcart/update_cart'); ?>
+		
+		<p>original quantity : <?php echo $quantity?> </p>
+		
+		<h5>Quantity</h5>
+		<input type="text" name="quantity" value="" size="5" />
+		<br/><br/>
 
-<?php echo form_open('shoppingcart/add_to_cart'); ?>
+		<div><input type="submit" value="Fix Order" /></div>
+	<?php else:?>
+	
+		<?php echo form_open('shoppingcart/add_to_cart'); ?>
+		
+		<h5>Quantity</h5>
+		<input type="text" name="quantity" value="" size="5" />
+		<br/><br/>
+		<div><input type="submit" value="Order Now" /></div>
+	
+	<?php endif;?>
 
-<h5>Quantity</h5>
-<input type="text" name="quantity" value="" size="5" />
-<p name="pid">
-<?php echo $product->id;?>
-</p>
-
-<div><input type="submit" value="Order Now" /></div>
 <?php form_close();?>
 </form>
 <br><br>
