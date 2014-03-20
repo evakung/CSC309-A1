@@ -10,6 +10,8 @@
 	font-family:fantasy;
 	text-align:center;
 	color:#2B3856;
+	margin-right:auto;
+	margin-left:auto;
 		margin: 0px auto;
 }
 

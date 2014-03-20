@@ -35,6 +35,7 @@ class Customer extends CI_Controller{
 			$this->customer_model->insert($customer);
 			$this->load->view('customer/successCustomer.php');
 		}else{
+			echo "here";
 			$this->load->view('customer/newForm.php');
 		}
 	}

@@ -18,7 +18,7 @@ body{
 table{
 	margin: 0px auto;
 }
-/*table.producttable td:link{
+table.producttable td:link{
 	color: white ;
 	background-color: transparent ;
 	text-decoration: none ;
@@ -26,7 +26,6 @@ table{
 table.producttable td:hover{
 	background-color:white;
 }
-*/
 
 </style>
 

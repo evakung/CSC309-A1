@@ -22,51 +22,45 @@ input{
 	margin: 0px auto;
 }
 
-
 </style>
+<!--
+<h2>Edit Product</h2>
+ -->
 <div align="center">
-<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395302430.png" />
+	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395303043.png" />
 </div>
-
-<!--<h2>New Product</h2>
--->
 
 <?php 
 	
 	
-	echo form_open_multipart('candystore/create');
-		
+	echo form_open("candystore/update/$product->id");
+	
 	echo form_label('Name'); 
 	echo form_error('name');
-	echo form_input('name',set_value('name'),"required");
+	echo form_input('name',$product->name,"required");
 ?>
 <br>
 <?php
 	echo form_label('Description');
 	echo form_error('description');
-	echo form_input('description',set_value('description'),"required");
+	echo form_input('description',$product->description,"required");
 ?>
 <br>
 <?php
 	echo form_label('Price');
 	echo form_error('price');
-	echo form_input('price',set_value('price'),"required");
+	echo form_input('price',$product->price,"required");
 ?>
 <br>
 <?php
-	echo form_label('Photo');
-	
-	if(isset($fileerror))
-		echo $fileerror;	
-?>	
-	<input type="file" name="userfile" size="20" />
-<br><br>
-<?php 	
-	
-	echo form_submit('submit', 'Create');
+	echo form_submit('submit', 'Save');
 	echo form_close();
 ?>	
 <br><br>
 <?php
 echo "<p>" . anchor('candystore/index','Back') . "</p>";
 ?>
+</body>
+</html>
+
+
