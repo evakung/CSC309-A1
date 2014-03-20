@@ -38,7 +38,7 @@ input{
 
 <br><br>
 <?php 
-echo "<p>" . anchor('candystore/index','Back') . "</p>";
+echo "<b><p>" . anchor('customer/index','<< Back') . "</p></b>";
 ?>
 </body>
 </html>
