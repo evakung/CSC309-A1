@@ -29,7 +29,7 @@ input{
 
  <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395305414.png" /></div>
 <?php 
-	echo "<p>" . anchor('customer/index','Back') . "</p>";
+	
 	
 	echo form_open("customer/update/$customer->id");
 	
@@ -53,7 +53,7 @@ input{
 <?php	
 	echo form_label('Password');
 	echo form_error('password');
-	echo form_input('password',$customer->password,"required");
+	echo form_password('password',$customer->password,"required");
 ?>
 <br>
 <?php	
@@ -69,4 +69,7 @@ input{
 	echo form_submit('submit', 'Save');
 	echo form_close();
 ?>	
+<?php
+	echo "<b><p>" . anchor('customer/index','<< Back') . "</p></b>";
+?>
 

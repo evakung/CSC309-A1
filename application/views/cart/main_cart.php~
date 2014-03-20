@@ -39,7 +39,7 @@ p{
 <table cellpadding="6" cellspacing="1" style="width:50%" border="0">
 
 <tr>
-  <th>Quantity</th>
+  <th>quantity</th>
   <th>Item name</th>
   <th style="text-align:right">Item Price</th>
   <th style="text-align:right">Sub-Total</th>

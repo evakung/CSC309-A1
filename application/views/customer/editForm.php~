@@ -29,7 +29,7 @@ input{
 
  <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395305414.png" /></div>
 <?php 
-	echo "<p>" . anchor('customer/index','Back') . "</p>";
+	
 	
 	echo form_open("customer/update/$customer->id");
 	
@@ -61,7 +61,7 @@ input{
 	echo form_error('email');
 	echo form_input('email',$customer->email,"required");
 ?>
-<br>
+<br><br>
 <?php	
 
 	
@@ -69,4 +69,7 @@ input{
 	echo form_submit('submit', 'Save');
 	echo form_close();
 ?>	
+<?php
+	echo "<b><p>" . anchor('customer/index','<< Back') . "</p></b>";
+?>
 

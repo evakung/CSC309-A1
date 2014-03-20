@@ -40,11 +40,11 @@ class Customer extends CI_Controller{
 	function update($id){
 
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('first', 'First Name', 'required|is_unique[customers.login]'); //Non overlapping usernames
+		$this->form_validation->set_rules('first', 'First Name', 'required|is_unique[customer.login]'); //Non overlapping usernames
 
 		$this->form_validation->set_rules('last', 'Last Name', 'required');
 		$this->form_validation->set_rules('login', 'Login', 'required');
-		$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|matches[passwordconf]'); //Added here, ->len(password) > 6, matches confirmation
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]'); //Added here, ->len(password) > 6,
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');
 		//Check email validity 
 

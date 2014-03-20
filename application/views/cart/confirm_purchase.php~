@@ -34,7 +34,7 @@ echo "<p>Note: Please double check on your order details and press confirm to pr
 
 
 echo form_open('item/create');
-echo form_submit('submit', 'Confirm ');
+echo form_submit('submit', 'Confirm Order Details');
 echo form_close();
 
 
