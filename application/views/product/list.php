@@ -68,7 +68,7 @@ table.producttable td:hover{
 			echo "<td>" . anchor("candystore/delete/$product->id",'Delete',"onClick='return confirm(\"Do you really want to delete this record?\");'") . "</td>";
 			echo "<td>" . anchor("candystore/editForm/$product->id",'Edit') . "</td>";
 			echo "<td>" . anchor("candystore/read/$product->id",'View') . "</td>";
-			echo "<td>" . anchor("shoppingcart/order_form/$product->id",'Order') . "</td>";
+			echo "<td>" . anchor("shoppingcart/order_form/$product->id/false",'Order') . "</td>";
 				
 			echo "</tr>";
 		}
