@@ -9,6 +9,10 @@ class ShoppingCart extends CI_Controller{
 		$current_customer = $this->session->userdata('login');
 	}
 	
+	function get_cart(){
+		return $this->session->userdata('cart');
+	}
+	
 	function view_shopping_cart(){
 			$cart = $this->session->userdata('cart');
 			$data = array(
@@ -81,7 +85,7 @@ class ShoppingCart extends CI_Controller{
 		$data=array(
 						'product' => $product,
 						'fromcart' => $fromcart,
-						'quantity' => 5
+						'quantity' => $this->get_quantity($product)
 					);
 		$this->session->set_userdata('to_be_ordered',$product->id);
 		$this->load->view('cart/order_item.php',$data);
@@ -176,6 +180,13 @@ class ShoppingCart extends CI_Controller{
 	}
 	
 	
+	function get_quantity($product){
+		foreach ($this->get_cart() as $items){
+			if($items['name'] == $product->name){
+				return $items['quantity'];
+			}
+		}
+	}
 	
 
 	
