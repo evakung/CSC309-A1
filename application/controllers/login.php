@@ -13,7 +13,8 @@ class Login extends CI_Controller{
 						'login' =>$this->input->post('login'),
 						'is_logged_in' => true,
 						'cart' => array(),
-						'to_be_ordered' => null
+						'to_be_ordered' => null,
+						'order_id' => null
 					);
 			
 			$this->session->set_userdata($data);

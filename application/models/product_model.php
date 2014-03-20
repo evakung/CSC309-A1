@@ -14,6 +14,13 @@ class Product_model extends CI_Model {
 		return $query->row(0,'Product');
 	}
 	
+	
+	function getName($name)
+	{
+		$query = $this->db->get_where('product',array('name' => $name));
+	
+		return $query->row(0,'Product');
+	}
 	function delete($id) {
 		return $this->db->delete("product",array('id' => $id ));
 	}

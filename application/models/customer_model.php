@@ -18,6 +18,11 @@ class Customer_model extends CI_Model{
 		return $q->row(0,'Customer');
 	}
 	
+	function getID($login){
+		$q = $this->db->get_where('customer', array('login'=>$login));
+		return $q->result();
+	}
+	
 	function delete($id){
 		return $this->db->delete("customer", array('id'=>$id));
 	}

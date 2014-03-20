@@ -2,6 +2,8 @@
 <?php 
 		echo "<p>" . anchor('candystore/newForm','Add New') . "</p>";
 		echo "<p>" . anchor('customer/index','come here') . "</p>";
+		echo "<p>" . anchor('shoppingcart/view_shopping_cart','cart') . "</p>";
+		
 		
 		echo "<h2> WASSUP   " . $this->session->userdata('login') . "</h2>";
 		echo "<p>here  </p>".$this->session->userdata('is_logged_in');

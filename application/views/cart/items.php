@@ -1,5 +1,5 @@
 <?php
-echo "<h2> WASSUP   " . $current_customer . "</h2>";
+echo "<h2>WAS just added blah blah shit shits ufck WASSUP   " . $this->session->userdata('login') . "</h2>";
+echo "<p>" . anchor('candystore/index','Back') . "</p>";
 
 
-printr( $this->cart->contents());

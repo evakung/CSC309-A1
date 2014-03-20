@@ -9,9 +9,14 @@ class ShoppingCart extends CI_Controller{
 		$current_customer = $this->session->userdata('login');
 	}
 	
-	function view_cart(){
-		$data['current_customer']=$this->get_customer(); 
-		$this->load->view("cart/items.php", $data);
+	function view_shopping_cart(){
+		$cart = $this->session->userdata('cart');
+		$data['cart'] = $cart;		
+		$this->load->view("cart/main_cart.php", $data);
+	}
+	
+	function update_cart(){
+		
 	}
 	
 	function order_form($id){
@@ -25,7 +30,11 @@ class ShoppingCart extends CI_Controller{
 	function add_to_cart(){
 		
 		$this->load->model('product_model');
-		$product = $this->product_model->get($this->session->userdata('to_be_ordered'));
+		$pid = $this->session->userdata('to_be_ordered');
+		if($pid == null || $this->session->userdata('login') != true){
+			redirect('candystore/index');
+		}
+		$product = $this->product_model->get($pid);
 		$name = $product->name;
 		$qty = $this->input->get_post('quantity');
 		$price=$product->price;
@@ -72,9 +81,22 @@ class ShoppingCart extends CI_Controller{
 			$this->session->set_userdata('cart', $cart);
 		}	
 		$this->session->set_userdata('to_be_ordered', null);
-		print_r( $this->session->all_userdata());
+		
+		$cart = $this->session->userdata('cart');
+		$data['cart'] = $cart;
+		$this->load->view("cart/items.php", $data);
+				
+	}
+	
+	function purchase(){
+		$this->load->view('cart/get_info.php');
 	}
 
+	
+	
+
+	
+	
 
 
 }
