@@ -37,7 +37,16 @@
 body{
 	background-image: url('<?php echo $bg; ?>'); 
 }
-	
+
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}	
 </style>
 
 

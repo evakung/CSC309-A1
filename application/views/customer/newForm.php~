@@ -21,16 +21,26 @@ input{
 	display: block;
 	margin: 0px auto;
 }
+
 .red {
 color: red;
 }
 
+
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
 </style>
 
 <div align="center">
 	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395304735.png" />
 </div>
-<p> <span class="red">*</span> = required fields </p>
 <?php 
 	echo form_open_multipart('customer/create');
 		
@@ -70,6 +80,6 @@ color: red;
 <br><br>
 
 <?php 
-	echo "<b><p>" . anchor('customer/index','<< Back') . "</p></b>";
+echo "<p>" . anchor('customer/index','<< Back') . "</p>";
 ?>
 

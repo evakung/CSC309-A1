@@ -26,13 +26,16 @@ form{
 	position:relative;
 }
 
-a{
-	color:blue;
-}
+
 a:hover{
 	color:white;
 }
-
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
 
 </style>
 
@@ -51,7 +54,6 @@ a:hover{
 	echo form_submit('submit', 'Login');
 	echo "<br><br>";
 	echo "New User? Click " . anchor('login/signup', 'Here') . " to register!";
-	
 ?>
 
 </body>

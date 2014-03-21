@@ -21,10 +21,20 @@ input{
 	display: block;
 	margin: 0px auto;
 }
+
 .red {
 color: red;
 }
 
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
 </style>
 
 <div align="center">
@@ -69,6 +79,6 @@ color: red;
 <br><br>
 
 <?php 
-	echo "<b><p>" . anchor('customer/index','<< Back') . "</p></b>";
+echo "<p>" . anchor('customer/index','<< Back') . "</p>";
 ?>
 

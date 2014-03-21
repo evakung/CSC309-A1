@@ -26,13 +26,16 @@ form{
 	position:relative;
 }
 
-a{
-	color:blue;
-}
+
 a:hover{
 	color:white;
 }
-
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
 
 </style>
 
