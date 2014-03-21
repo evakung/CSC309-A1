@@ -13,8 +13,8 @@ class ShoppingCart extends CI_Controller{
 		return $this->session->userdata('cart');
 	}
 	
-
-	function empty_cart(){
+	/*if there are items in the cart, but "deleted", the form see if the quantity > 0 to display the items in the cart*/
+	function empty_cart(){ 
 		$cart = $this->get_cart();
 		return count($cart);
 	}

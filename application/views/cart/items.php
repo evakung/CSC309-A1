@@ -45,7 +45,8 @@ a:visited:hover{
 </tr>
 <?php $i = 1; ?>
 <?php foreach ($cart as $items): ?>
-
+	<?php if ($items['quantity'] > 0):?>
+	
 	<?php echo form_hidden($i.'[name]', $items['name']); ?>
 
 	<tr>
@@ -70,6 +71,7 @@ a:visited:hover{
 	  <td style="text-align:right">$<?php echo $this->cart->format_number($items['subtotal']); ?></td>
 	</tr>
 <?php $i++; ?>
+<?php endif;?>
 <?php endforeach; ?>
 
 <tr>
