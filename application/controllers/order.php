@@ -38,7 +38,8 @@ class Order extends CI_Controller{
 		$this->order_model->insert($order);
 		$result = $this->db->insert_id();
 		$this->session->set_userdata('order_id', $result);
-		$this->load->view('cart/confirm_purchase.php');
+		$data['order_info'] = $order;
+		$this->load->view('cart/confirm_purchase.php', $data);
 		
 	}
 	
@@ -60,9 +61,11 @@ class Order extends CI_Controller{
 	}
 	
 	function delete($id) {
-		$this->load->model('order_model');
+		$this->load->model('order_model','item_model');
 	
 		if (isset($id))
+			//delete order_items
+			
 			$this->order_model->delete($id);
 	
 		//Then we redirect to the index page again

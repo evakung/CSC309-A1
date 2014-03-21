@@ -41,7 +41,8 @@ a:visited:hover{
 <?php
 echo "<p>Note: Please double check on your order details and press confirm to proceeed. </p>";
 
-
+// $order_info  -- the variable that youare going to display infrom from. ie. $order_info->order_date etc.
+$cart = $this->session->userdata('cart'); // The info of all the items -- need to loop first, then call our the items ie. item['name']
 echo form_open('item/create');
 echo form_submit('submit', 'Confirm ');
 echo form_close();
