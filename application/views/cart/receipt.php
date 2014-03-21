@@ -37,7 +37,7 @@ a:visited:hover{
  <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395357042.png" /></div>
 <?php
 echo "FINAL RECEIPT!";
-echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+echo "<p>" . anchor('candystore/index',' Back to the Candyshop') . "</p>";?>
 </body>
 </html>
 

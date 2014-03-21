@@ -28,13 +28,14 @@ class Item extends CI_Controller{
 				}
 				
 			}
-			if ($count == 0){
+			if ($count == count($cart)){
+				$this->load->view('cart/empty_cart.php');
+			}else{
 				//empty the cart
 				$empty_cart = array();
 				$this->session->set_userdata('cart', $empty_cart);
-				$this->load->view("cart/receipt.php");
+				$this->load->view('cart/receipt.php');
 			}
-			$this->load->view('cart/empty_cart.php');
 		}
 	}
 	

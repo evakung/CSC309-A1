@@ -103,7 +103,7 @@ a:visited:hover{
 </table>
 <br><br><br>
 <?php 
-	echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+	echo "<p>" . anchor('candystore/index','<< Back') . "</p>";
 	echo " | ";
 	echo "<p>" . anchor('shoppingcart/purchase','Final Order Details >>') . "</p>";
 ?>

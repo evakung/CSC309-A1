@@ -83,7 +83,9 @@ a:visited:hover{
 
 </table>
 <br><br>
-<?php echo "<p>" . anchor('customer/index','<< Back') . "</p>";?>
+<?php echo "<p>" . anchor('candystore/index','<< Back') . "</p>";?>
+<?php echo "<p>" . anchor('shoppingcart/view_shopping_cart','>> View Cart') . "</p>";?>
+
 </body>
 </html>
 
