@@ -4,6 +4,6 @@
 		<meta content="text/html">
 		<title>Candy Store Time!!</title>
 		<link rel="stylesheet" href="<?php echo base_url();?>css/style.css" type="text/css" media="screen" charset="utf-8">
-		<?php echo "<p>" . anchor('login/logout','Leave Me') . "</p>"; ?> 
+		<p>This is a head and it will show everywehere!!!!!!!!!</p>
 	</head>
 <body>

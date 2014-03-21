@@ -26,7 +26,6 @@ input{
 color: red;
 }
 
-
 a:hover{
 	color:white;
 }

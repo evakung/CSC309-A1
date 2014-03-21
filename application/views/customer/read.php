@@ -27,6 +27,13 @@ a:visited{
 a:visited:hover{
 	color:white;
 }
+.logout{
+	position:absolute;
+	font-size:20px;
+	top:20;
+   	right:50;
+
+}
 </style>
  <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395363546.png" /></a></div>
 <h3><b>Currently viewing information of : <?php echo $customer->login;?></b></h3>
@@ -38,5 +45,6 @@ a:visited:hover{
 	echo "<p> Password : " . $customer->password . "</p>";
 	echo "<p> Email : " . $customer->email . "</p>";
 	echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>	
 

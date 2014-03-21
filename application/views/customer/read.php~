@@ -18,6 +18,15 @@ body{
 	background-image: url('<?php echo $bg; ?>'); 
 }
 
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
 </style>
  <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395363546.png" /></a></div>
 <h3><b>Currently viewing information of : <?php echo $customer->login;?></b></h3>

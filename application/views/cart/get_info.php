@@ -30,6 +30,13 @@ a:visited{
 a:visited:hover{
 	color:white;
 }
+.logout{
+	position:absolute;
+	font-size:20px;
+	top:20;
+   	right:50;
+
+}
 </style>
 
 </head>
@@ -63,7 +70,7 @@ if(isset($fileerror))
 <br><br><br>
 	
 <?php 	
-	
+	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 	echo form_submit('submit', 'Submit Payment Information');
 	echo form_close();
 ?>	

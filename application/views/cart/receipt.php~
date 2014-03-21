@@ -21,13 +21,23 @@ table{
 p{
 	display:inline;
 }
+
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
 </style>
 <body>
 
  <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395357042.png" /></div>
 <?php
 echo "FINAL RECEIPT!";
-echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+echo "<p>" . anchor('candystore/index',' Back to the Candyshop') . "</p>";?>
 </body>
 </html>
 

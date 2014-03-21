@@ -25,7 +25,13 @@ input{
 .red {
 color: red;
 }
+.logout{
+	position:absolute;
+	font-size:20px;
+	top:20;
+   	right:50;
 
+}
 a:hover{
 	color:white;
 }
@@ -80,5 +86,6 @@ a:visited:hover{
 
 <?php 
 echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 

@@ -31,6 +31,14 @@ a:visited{
 a:visited:hover{
 	color:white;
 }
+.logout{
+	position:absolute;
+	font-size:20px;
+	top:20;
+   	right:50;
+
+}
+
 </style>
 
 </head>
@@ -46,7 +54,7 @@ echo form_open('item/create');
 echo form_submit('submit', 'Confirm ');
 echo form_close();
 
-
+		echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
  echo "<p>" . anchor('customer/index','<< Back') . "</p>";
 ?>
 
