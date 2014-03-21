@@ -21,6 +21,16 @@ table{
 p{
 	display:inline;
 }
+
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
 </style>
 
 </head>
@@ -30,10 +40,6 @@ p{
 	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395343118.png" />
 </div>
 
-<?php 
-	echo "<p>" . anchor('candystore/index','Back') . " | </p>";
-	echo "<p>" . anchor('shoppingcart/purchase','Final Order Details') . "</p>";
-?>
 
 <table cellpadding="6" cellspacing="1" style="width:50%" border="0">
 
@@ -94,7 +100,12 @@ p{
 </tr>
 
 </table>
-
+<br><br><br>
+<?php 
+	echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+	echo " | ";
+	echo "<p>" . anchor('shoppingcart/purchase','Final Order Details >>') . "</p>";
+?>
 </body>
 </html>
 

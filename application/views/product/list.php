@@ -82,7 +82,7 @@ a:visited:hover{
 		}
 		echo "<table>";
 		
-		echo anchor("login/logout", "logout");
+		echo "<p><b>" . anchor("login/logout", "Logout") . "</p>";
 ?>	
 </body>
 </html>

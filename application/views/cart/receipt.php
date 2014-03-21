@@ -27,10 +27,7 @@ p{
  <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395357042.png" /></div>
 <?php
 echo "FINAL RECEIPT!";
-
-
-echo "<p><b>" . anchor('candystore/index','<< Back') . "</b></p>";
-?>
+echo "<p>" . anchor('customer/index','<< Back') . "</p>";
 </body>
 </html>
 
