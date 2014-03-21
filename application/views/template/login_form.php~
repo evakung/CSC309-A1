@@ -29,6 +29,9 @@ form{
 a{
 	color:blue;
 }
+a:hover{
+	color:white;
+}
 
 
 </style>

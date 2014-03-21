@@ -1,15 +1,33 @@
-<?php
+<html>
+<head>
 
-echo "<p>" . anchor('candystore/index','Back') . "</p>";
+<?php $bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";?>
+<style type="text/css">
+*{
+	font-family:fantasy;
+	text-align:center;
+	color:#2B3856;
+}
 
+body{
+	background-image: url('<?php echo $bg; ?>'); 
+}
 
-?>
+table{
+	margin: 0px auto;
+}
 
-<h2> You cart has just been updated </h2>
+</style>
 
+</head>
+<body> 
+
+<div align="center">
+	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395343118.png" />
+</div>
+<h2> Your cart has just been updated! </h2>
 
 <table cellpadding="6" cellspacing="1" style="width:50%" border="0">
-
 <tr>
   <th>Quantity</th>
   <th>Item name</th>
@@ -17,7 +35,6 @@ echo "<p>" . anchor('candystore/index','Back') . "</p>";
   <th style="text-align:right">Sub-Total</th>
 </tr>
 <?php $i = 1; ?>
-
 <?php foreach ($cart as $items): ?>
 
 	<?php echo form_hidden($i.'[name]', $items['name']); ?>
@@ -43,9 +60,7 @@ echo "<p>" . anchor('candystore/index','Back') . "</p>";
 	  <td style="text-align:right"><?php echo $this->cart->format_number($items['price']); ?></td>
 	  <td style="text-align:right">$<?php echo $this->cart->format_number($items['subtotal']); ?></td>
 	</tr>
-
 <?php $i++; ?>
-
 <?php endforeach; ?>
 
 <tr>
@@ -56,3 +71,8 @@ echo "<p>" . anchor('candystore/index','Back') . "</p>";
 </tr>
 
 </table>
+<br><br>
+<?php echo "<p><b>" . anchor('candystore/index','<< Back') . "</b></p>";?>
+</body>
+</html>
+

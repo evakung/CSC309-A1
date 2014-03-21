@@ -51,7 +51,6 @@ a:hover{
 	echo form_submit('submit', 'Login');
 	echo "<br><br>";
 	echo "New User? Click " . anchor('login/signup', 'Here') . " to register!";
-	
 ?>
 
 </body>

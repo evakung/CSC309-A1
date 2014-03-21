@@ -18,16 +18,16 @@ body{
 table{
 	margin: 0px auto;
 }
-/*table.producttable td:link{
-	color: white ;
-	background-color: transparent ;
-	text-decoration: none ;
-}
-table.producttable td:hover{
-	background-color:white;
-}
-*/
 
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
 </style>
 
 </head>
@@ -37,7 +37,6 @@ table.producttable td:hover{
 	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395300957.png" />
 </div>
 
-<!--<h2>Product Table</h2>-->
 <?php 
 		echo "<p>" . anchor('candystore/newForm','Add New') . "</p>";
 		echo "<p>" . anchor('customer/index','come here') . "</p>";
@@ -46,7 +45,7 @@ table.producttable td:hover{
 			echo "<p>" . anchor('shoppingcart/view_shopping_cart','cart') . "</p>";
 
 		}else{
-			echo "please log in";
+			echo "You are not logged in, please log in or create a new account to access your shopping cart. ";
 		}
 		//echo "<p>" . anchor('shoppingcart/view_shopping_cart','cart') . "</p>";
 		
@@ -66,9 +65,9 @@ table.producttable td:hover{
 			echo "<td>" . $product->price . "</td>";
 			echo "<td><img src='" . base_url() . "images/product/" . $product->photo_url . "' width='100px' /></td>";
 			echo "<td>" . anchor("candystore/delete/$product->id",'Delete',"onClick='return confirm(\"Do you really want to delete this record?\");'") . "</td>";
-			echo "<td>" . anchor("candystore/editForm/$product->id",'Edit') . "</td>";
-			echo "<td>" . anchor("candystore/read/$product->id",'View') . "</td>";
-			echo "<td>" . anchor("shoppingcart/order_form/$product->id/false",'Order') . "</td>";
+			echo "<td> | " . anchor("candystore/editForm/$product->id",'Edit') . "</td>";
+			echo "<td> | " . anchor("candystore/read/$product->id",'View') . "</td>";
+			echo "<td> | " . anchor("shoppingcart/order_form/$product->id/false",'Order') . "</td>";
 				
 			echo "</tr>";
 		}
