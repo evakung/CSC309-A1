@@ -1,8 +1,13 @@
 <?php
 class Order extends CI_Controller{
 	function index(){
+		
+		$this->load->model('order_model');
+		$orders = $this->order_model->getAll();
+		$data['orders']=$orders;
+	
 		//view all orders
-		$this->load->view('order.php');
+		$this->load->view('order.php', $data);
 	}
 	
 	function create(){
@@ -45,6 +50,26 @@ class Order extends CI_Controller{
 		}
 		return $total;
 	}
+	
+	
+	function read($id) {
+		$this->load->model('order_model');
+		$order = $this->order_model->get($id);
+		$data['order']=$order;
+		$this->load->view('readOrder.php',$data);
+	}
+	
+	function delete($id) {
+		$this->load->model('order_model');
+	
+		if (isset($id))
+			$this->order_model->delete($id);
+	
+		//Then we redirect to the index page again
+		redirect('order/index', 'refresh');
+	}
+	
+	
 	
 	
 }
