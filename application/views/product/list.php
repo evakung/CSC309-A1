@@ -40,6 +40,24 @@ a:visited:hover{
   	background-repeat: no-repeat;
 	padding-left: 30px;  /* width of the image plus a little extra padding */
 }
+.add{
+
+background-image: url('https://cdn0.iconfinder.com/data/icons/elite-food/512/candy-24.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  /* width of the image plus a little extra padding */
+}
+.view{
+
+background-image: url('http://png-4.findicons.com/files/icons/949/token/16/msn.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  /* width of the image plus a little extra padding */
+}
+.vieworder{
+
+background-image: url('https://www.bendzulla.com/images/help/membership/receipt_button.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  /* width of the image plus a little extra padding */
+}
 </style>
 
 </head>
@@ -52,11 +70,11 @@ a:visited:hover{
 
 <?php 
 		if ($this->session->userdata('is_admin')==0){ //1 otherwise
-			echo "Admin Privledges";
+			echo "<p><i>Admin Privileges</p></i>";
 			
-			echo "<p>" . anchor('candystore/newForm','Add New Product') . "</p>";
-			echo "<p>" . anchor('customer/index','View Customers') . "</p>";
-			echo "<p>" . anchor('order/index','View Orders') . "</p>";
+			echo '<p><span class="add">' . anchor('candystore/newForm','Add New Product') . "</span></p>";
+			echo '<p><span class="view">' . anchor('customer/index','View Customers') . "</span></p>";
+			echo '<p><span class="vieworder">' . anchor('order/index','View Orders') . "</span></p>";
 			
 		}
 		
