@@ -190,11 +190,11 @@ class ShoppingCart extends CI_Controller{
 		var_dump($cart);
 		$newCart = array_values($cart);
 		//$this->session->set_userdata('cart', $cart);
-		$this->session->set_userdata('cart', $newCart);
+		//$this->session->set_userdata('cart', $newCart);
 		
-		redirect('candystore/index', 'refresh');
+		direct('candystore/index', 'refresh');
 				
-		
+		//print_r($newCart);
 	}
 
 	function edit_form($order){
