@@ -1,8 +1,7 @@
 <?php
 class Login extends CI_Controller{
 	function index(){
-		$data['main_content'] = "template/login_form";
-		$this->load->view('template/template.php', $data);
+		$this->load->view('template/login_form.php');
 	}
 	
 	function validate_credentials(){
