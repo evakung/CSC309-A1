@@ -28,7 +28,7 @@ p{
 <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395344671.png" /></div>
 
 <?php 
-echo "<b><p>" . anchor('customer/index','<< Back') . "</p></b>";
+echo "<p>" . anchor('customer/index','<< Back') . "</p>";
 
 echo form_open_multipart('order/create');
 ?><br>

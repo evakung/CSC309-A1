@@ -36,5 +36,5 @@ input{
 
 <?php echo 
 	anchor('login', 'Login Now');
-	echo "<b><p>" . anchor('customer/index','<< Back') . "</p></b>";
+	echo "<p>" . anchor('customer/index','<< Back') . "</p>";
 ?>

@@ -72,7 +72,7 @@ table{
 
 </table>
 <br><br>
-<?php echo "<p><b>" . anchor('candystore/index','<< Back') . "</b></p>";?>
+<?php echo "<p>" . anchor('customer/index','<< Back') . "</p>";?>
 </body>
 </html>
 

@@ -71,7 +71,7 @@ body{
 </form>
 <br><br>
 <?php
-	echo "<p>" . anchor('candystore/index','Back') . "</p>";
+	echo "<p><b>" . anchor('candystore/index','<< Back') . "</b></p>";
 ?>
 
 </body>

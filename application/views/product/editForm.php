@@ -57,7 +57,7 @@ input{
 ?>	
 <br><br>
 <?php
-echo "<b><p>" . anchor('customer/index','<< Back') . "</p></b>";
+echo "<p>" . anchor('customer/index','<< Back') . "</p>";
 ?>
 </body>
 </html>
