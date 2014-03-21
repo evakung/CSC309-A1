@@ -1,7 +1,8 @@
 <?php
 class Order extends CI_Controller{
 	function index(){
-		
+		//view all orders
+		$this->load->view('order.php');
 	}
 	
 	function create(){
