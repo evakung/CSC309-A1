@@ -23,6 +23,15 @@ input{
 	margin: 0px auto;
 }
 
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
 
 </style>
 

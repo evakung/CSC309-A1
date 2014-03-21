@@ -20,13 +20,22 @@ body{
 }
 
 
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
 </style>
 
  <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395309189.png" /></div>
 <h1>HARO</h1>
 <?php 
-	echo "<p>" . anchor('customer/newForm','add new bitches') . "</p>";
-	echo "<p>" . anchor('candystore/index','go home bitch') . "</p>";
+	echo "<p>" . anchor('customer/newForm','Add new user') . "</p>";
+	echo "<p>" . anchor('candystore/index','Home') . "</p>";
 
 
 	echo "<table>";
