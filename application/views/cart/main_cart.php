@@ -31,6 +31,13 @@ a:visited{
 a:visited:hover{
 	color:white;
 }
+.logout{
+	position:absolute;
+	font-size:20px;
+	top:20;
+   	right:50;
+
+}
 </style>
 
 </head>
@@ -106,6 +113,7 @@ a:visited:hover{
 	echo "<p>" . anchor('candystore/index','<< Back') . "</p>";
 	echo " | ";
 	echo "<p>" . anchor('shoppingcart/purchase','Final Order Details >>') . "</p>";
+	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 </body>
 </html>

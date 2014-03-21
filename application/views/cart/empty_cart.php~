@@ -32,18 +32,23 @@ a:visited{
 a:visited:hover{
 	color:white;
 }
+.logout{
+	position:absolute;
+	font-size:20px;
+	top:20;
+   	right:50;
+
+}
 
 </style>
 
-<div align="center">
-	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395305183.png" />
-</div>
+ <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395422745.png" /></a></div>
 
 
-<h1>Congratulations!</h1>
-<p>Your account has been created! 
 
-<?php echo 
-	anchor('login', 'Login Now');
-	echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+<h2 color="red">Cannot process payment because your cart is empty!</h2>
+
+<?php 
+echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
+

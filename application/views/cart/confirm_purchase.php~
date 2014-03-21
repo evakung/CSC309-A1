@@ -22,6 +22,15 @@ p{
 	display:inline;
 	color:red;
 }
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
 </style>
 
 </head>

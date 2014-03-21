@@ -26,6 +26,13 @@ a:visited{
 a:visited:hover{
 	color:white;
 }
+.logout{
+	position:absolute;
+	font-size:20px;
+	top:20;
+   	right:50;
+
+}
 </style>
 
 </head>
@@ -84,7 +91,9 @@ a:visited:hover{
 </table>
 <br><br>
 <?php echo "<p>" . anchor('candystore/index','<< Back') . "</p>";?>
-<?php echo "<p>" . anchor('shoppingcart/view_shopping_cart','>> View Cart') . "</p>";?>
+<?php echo "<p>" . anchor('shoppingcart/view_shopping_cart','>> View Cart') . "</p>";
+echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
+?>
 
 </body>
 </html>

@@ -47,6 +47,13 @@ a:visited{
 a:visited:hover{
 	color:white;
 }	
+.logout{
+	position:absolute;
+	font-size:20px;
+	top:20;
+   	right:50;
+
+}
 </style>
 
 
@@ -81,6 +88,7 @@ a:visited:hover{
 <br><br>
 <?php
 echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 
 </body>

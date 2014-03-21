@@ -17,6 +17,15 @@ table{
 	margin: 0px auto;
 }
 
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
 </style>
 
 </head>
@@ -36,7 +45,8 @@ table{
 </tr>
 <?php $i = 1; ?>
 <?php foreach ($cart as $items): ?>
-
+	<?php if ($items['quantity'] > 0):?>
+	
 	<?php echo form_hidden($i.'[name]', $items['name']); ?>
 
 	<tr>
@@ -61,6 +71,7 @@ table{
 	  <td style="text-align:right">$<?php echo $this->cart->format_number($items['subtotal']); ?></td>
 	</tr>
 <?php $i++; ?>
+<?php endif;?>
 <?php endforeach; ?>
 
 <tr>
@@ -72,7 +83,11 @@ table{
 
 </table>
 <br><br>
-<?php echo "<p>" . anchor('customer/index','<< Back') . "</p>";?>
+<?php echo "<p>" . anchor('candystore/index','<< Back') . "</p>";?>
+<?php echo "<p>" . anchor('shoppingcart/view_shopping_cart','>> View Cart') . "</p>";
+echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
+?>
+
 </body>
 </html>
 

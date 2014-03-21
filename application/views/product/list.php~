@@ -28,6 +28,18 @@ a:visited{
 a:visited:hover{
 	color:white;
 }
+.logout{
+	position:absolute;
+	font-size:20px;
+	top:20;
+   	right:50;
+
+}
+.cart{
+ 	background-image: url('http://zurametals.com/wp-content/themes/zurametals/images/cart-icon.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  /* width of the image plus a little extra padding */
+}
 </style>
 
 </head>
@@ -36,6 +48,7 @@ a:visited:hover{
 <div align="center">
 	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395300957.png" />
 </div>
+
 
 <?php 
 		if ($this->session->userdata('is_admin')==0){ //1 otherwise
@@ -49,7 +62,7 @@ a:visited:hover{
 		
 		
 		if($this->session->userdata('is_logged_in')==true){
-			echo "<p>" . anchor('shoppingcart/view_shopping_cart','cart') . "</p>";
+			echo '<p><span class="cart">' . anchor('shoppingcart/view_shopping_cart','My Shopping Cart') . '</span></p><br>'; //Users Cart option 
 
 		}else{
 			echo "You are not logged in, please log in or create a new account to access your shopping cart. ";
@@ -57,7 +70,7 @@ a:visited:hover{
 		//echo "<p>" . anchor('shoppingcart/view_shopping_cart','cart') . "</p>";
 		
 		
-		echo "<h2> Current user:   " . $this->session->userdata('login') . "</h2>";
+		echo "<h2> Hello " . $this->session->userdata('login') . " ! </h2>";
 ?>
 <table class="producttable">
 <?php
@@ -81,8 +94,7 @@ a:visited:hover{
 			echo "</tr>";
 		}
 		echo "<table>";
-		
-		echo "<p>" . anchor("login/logout", "Logout") . "</p>";
+		echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>	
 </body>
 </html>

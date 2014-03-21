@@ -20,10 +20,25 @@ body{
 input{ 
 	display: block;
 }
-	
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
+.logout{
+	position:absolute;
+	font-size:20px;
+	top:20;
+   	right:50;
+
+}	
 </style>
 <body>
- <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395302158.png" /></div>
+	<div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395302158.png" /></div>
 <h2>Product Entry</h2>
 <?php 
 
@@ -39,6 +54,7 @@ input{
 <br><br>
 <?php 
 echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 </body>
 </html>

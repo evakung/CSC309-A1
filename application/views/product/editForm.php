@@ -21,10 +21,25 @@ input{
 	margin: 0px auto;
 }
 
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
+.logout{
+	position:absolute;
+	font-size:20px;
+	top:20;
+   	right:50;
+
+}
+
 </style>
-<!--
-<h2>Edit Product</h2>
- -->
+
 <div align="center">
 	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395303043.png" />
 </div>
@@ -58,6 +73,7 @@ input{
 <br><br>
 <?php
 echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 </body>
 </html>

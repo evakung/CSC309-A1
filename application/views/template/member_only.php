@@ -1,4 +1,4 @@
-<p>member only</p>.
+<p>Member Only</p>.
 
 <?php 
 echo "<p>" . anchor('candystore/index','check dem goodies') . "</p>";
