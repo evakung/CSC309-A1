@@ -42,7 +42,7 @@ body{
 		
 	
 		echo "<td>" . anchor("customer/delete/$customer->id",'Delete',"onClick='return confirm(\"Do you really want to delete this record?\");'") . "</td>";
-		echo "<td>" . anchor("customer/editForm/$customer->id",'Edit') . "</td>";
+//		echo "<td>" . anchor("customer/editForm/$customer->id",'Edit') . "</td>";
 		echo "<td>" . anchor("customer/read/$customer->id",'View') . "</td>";
 	
 		echo "</tr>";

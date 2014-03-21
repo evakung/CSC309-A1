@@ -12,6 +12,7 @@ class Order extends CI_Controller{
 	
 		$this->load->model('customer_model');
 		$customer_id = $this->customer_model->getID($this->session->userdata('login'));
+		$cid=0;
 		foreach ($customer_id as $row){
 			$cid= $row->id;
 		}
