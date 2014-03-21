@@ -58,9 +58,10 @@ a:visited:hover{
 <?php $i = 1; ?>
 
 <?php foreach ($cart as $items): ?>
-
+	<?php if ($items['quantity'] > 0):?>
+	
 	<?php echo form_hidden($i.'[name]', $items['name']); ?>
-
+	
 	<tr>
 	  <td><?php echo $items['quantity']; ?></td>
 	  <td>
@@ -89,7 +90,7 @@ a:visited:hover{
 	</tr>
 
 <?php $i++; ?>
-
+<?php endif;?>
 <?php endforeach; ?>
 
 <?php endif;?>

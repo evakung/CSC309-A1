@@ -31,6 +31,43 @@ class ShoppingCart extends CI_Controller{
 			$this->load->view("cart/main_cart.php", $data);
 	}
 	
+	function delete_item($pname){
+	
+		$index=0;
+		$cart = $this->get_cart();
+		$this->load->model('product_model');
+		$product = $this->product_model->getName($pname);
+		$name = $product->name;
+		$price=$product->price;
+		
+		foreach ($cart as $items){
+			if($items['name'] == $product->name){
+				$order = array(
+						'name'=>$name,
+						'price'=>$price,
+						'quantity'=>0,
+						'subtotal'=>$price*0
+				);
+				$replace = array_replace($items, $order);
+				$mainReplace = array($index => $replace);
+				$newCart = array_replace($cart, $mainReplace);
+				$this->session->set_userdata('cart', $newCart);
+				break;
+			}$index++;
+		}
+	
+		$cart = $this->session->userdata('cart');
+		$data = array(
+				'cart'=>$cart,
+				'total'=>$this->get_total(),
+				'cart_empty'=>$this->empty_cart()
+		);
+		$this->load->view("cart/main_cart.php", $data);
+	
+	}
+	
+	
+	
 	function update_cart(){
 		$this->load->model('product_model');
 		$pid = $this->session->userdata('to_be_ordered');
@@ -81,7 +118,8 @@ class ShoppingCart extends CI_Controller{
 		$cart = $this->session->userdata('cart');
 		$data = array(
 				'cart'=>$cart,
-				'total'=>$this->get_total()
+				'total'=>$this->get_total(),
+				'cart_empty'=>$this->empty_cart()
 		);
 		$this->load->view("cart/items.php", $data);
 		
@@ -177,25 +215,6 @@ class ShoppingCart extends CI_Controller{
 	}
 	
 	
-	function delete_item($product){
-		
-		$index=0;
-		$cart = $this->get_cart();
-		foreach ($cart as $items){
- 			if($items['name'] == $product){ 
- 				break;
-			}$index++;
-		}
-		unset($cart[$index]);
-		var_dump($cart);
-		$newCart = array_values($cart);
-		//$this->session->set_userdata('cart', $cart);
-		//$this->session->set_userdata('cart', $newCart);
-		
-		direct('candystore/index', 'refresh');
-				
-		//print_r($newCart);
-	}
 
 	function edit_form($order){
 		$this->load->model('product_model');
