@@ -64,7 +64,7 @@ class Order extends CI_Controller{
 		$this->load->model('order_model','item_model');
 	
 		if (isset($id))
-			//delete order_items
+			//delete order_items TODO
 			
 			$this->order_model->delete($id);
 	

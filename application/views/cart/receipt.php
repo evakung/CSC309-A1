@@ -43,6 +43,10 @@ a:visited:hover{
 
  <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395357042.png" /></div>
 <?php
+
+print_r($cart);
+
+
 echo "FINAL RECEIPT!";
 echo "<p>" . anchor('candystore/index',' Back to the Candyshop') . "</p>";
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
