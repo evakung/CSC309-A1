@@ -36,4 +36,4 @@ a:visited:hover{
 </div>
 <p>Your log in has failed, you have have entered an incorrecct username and/or password. <br>Please try again.</p>
 <br><br><br>
-<?php echo "<p>" . anchor('customer/index','<< Back') . "</p>";?>
+<?php echo "<p>" . anchor('login/index','<< Back') . "</p>";?>

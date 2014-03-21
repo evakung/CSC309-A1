@@ -8,8 +8,6 @@ class Login extends CI_Controller{
 		$this->load->model('customer_model');
 		$password = $this->input->get_post("password");
 		$admin = $this->is_admin($this->input->post('login'));
-		echo "here";
-		
 		if($this->customer_model->validate($password)){ //if the user has valid user
 			$data = array(
 						'login' =>$this->input->post('login'),
@@ -25,7 +23,6 @@ class Login extends CI_Controller{
 		}
 		else{
 			$this->load->view('template/fail.php');
-			
 		}
 	}
 	
