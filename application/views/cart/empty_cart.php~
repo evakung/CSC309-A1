@@ -46,9 +46,10 @@ a:visited:hover{
 
 
 
-<h2 color="red">Cannot process payment because your cart is empty!</h2>
+<h2>Cannot process payment because your cart is empty!</h2>
 
 <?php 
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
+
 ?>
 

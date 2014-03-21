@@ -4,7 +4,6 @@
 	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
 ?>
 </head>
-<!-- #f8bfe2pink #809cf4blue --> 
 <style type="text/css">
 *{
 	font-family:fantasy;
@@ -14,7 +13,7 @@
 
 
 body{
-	background-image: url('<?php echo $bg; ?>'); 
+	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
 }
 
 input{ 
@@ -53,7 +52,7 @@ a:visited:hover{
 
 <br><br>
 <?php 
-echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+echo "<p>" . anchor('candystore/index','<< Back') . "</p>";
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 </body>

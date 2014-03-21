@@ -13,7 +13,7 @@
 }
 
 body{
-	background-image: url('<?php echo $bg; ?>'); 
+	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
 }
 
 input{ 
@@ -72,7 +72,7 @@ a:visited:hover{
 ?>	
 <br><br>
 <?php
-echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+echo "<p>" . anchor('candystore/index','<< Back') . "</p>";
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 </body>

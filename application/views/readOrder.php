@@ -1,9 +1,9 @@
+<!-- ORDER ENTRY PAGE (VIEW ENTRY) --> 
 <html>
 <head>
-<?php 
-	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
-?>
+<?php $bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";?>
 </head>
+
 <!-- #f8bfe2pink #809cf4blue --> 
 <style type="text/css">
 *{
@@ -17,13 +17,30 @@ body{
 	background-image: url('<?php echo $bg; ?>'); 
 }
 
-input{ 
-	display: block;
+table{ 
+		margin: 0px auto;
 }
-	
+
+a:hover{
+	color:white;
+}
+a:visited{
+	color:#663366;
+}
+a:visited:hover{
+	color:white;
+}
+.logout{
+	position:absolute;
+	font-size:20px;
+	top:20;
+   	right:50;
+
+}
+
 </style>
-<body>
- <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395302158.png" /></div>
+<body> <div align="center">
+<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395428978.png" /></a></div>
 <h2>Order Entry</h2>
 
 
@@ -45,6 +62,9 @@ echo "<table>";
 				
 			echo "</tr>";
 		echo "</table>";
+echo "<p>" . anchor('candystore/index','<< Back') . "</p>";
+	
+echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 </body>
 </html>

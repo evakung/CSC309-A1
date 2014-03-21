@@ -67,7 +67,7 @@ a:visited:hover{
 			echo "</tr>";
 		}
 		echo "<table>";
-		echo "<p>" . anchor('candystore/index','<< Back') . " | ";
+		echo "<p>" . anchor('candystore/index','<< Back') . " | </p>";
 		
-		echo "<b>" . anchor("login/logout", "Logout") . "</b></p>";
+		echo "<b>" . anchor("login/logout", "Logout") . "</b>";
 ?>	

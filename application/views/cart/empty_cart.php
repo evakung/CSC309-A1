@@ -15,7 +15,7 @@
 
 
 body{
-	background-image: url('<?php echo $bg; ?>'); 
+	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
 }
 
 input{ 
@@ -50,5 +50,6 @@ a:visited:hover{
 
 <?php 
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
+
 ?>
 

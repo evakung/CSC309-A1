@@ -35,28 +35,28 @@ a:visited:hover{
    	right:50;
 
 }
-.cart{
+.cart{	
  	background-image: url('http://zurametals.com/wp-content/themes/zurametals/images/cart-icon.png');
   	background-repeat: no-repeat;
-	padding-left: 30px;  /* width of the image plus a little extra padding */
+	padding-left: 30px;  
 }
 .add{
 
-background-image: url('https://cdn0.iconfinder.com/data/icons/elite-food/512/candy-24.png');
+	background-image: url('https://cdn0.iconfinder.com/data/icons/elite-food/512/candy-24.png');
   	background-repeat: no-repeat;
-	padding-left: 30px;  /* width of the image plus a little extra padding */
+	padding-left: 30px;  
 }
 .view{
 
-background-image: url('http://png-4.findicons.com/files/icons/949/token/16/msn.png');
+	background-image: url('http://png-4.findicons.com/files/icons/949/token/16/msn.png');
   	background-repeat: no-repeat;
-	padding-left: 30px;  /* width of the image plus a little extra padding */
+	padding-left: 30px;  
 }
 .vieworder{
 
-background-image: url('https://www.bendzulla.com/images/help/membership/receipt_button.png');
+	background-image: url('https://www.bendzulla.com/images/help/membership/receipt_button.png');
   	background-repeat: no-repeat;
-	padding-left: 30px;  /* width of the image plus a little extra padding */
+	padding-left: 30px;  
 }
 </style>
 
@@ -70,7 +70,7 @@ background-image: url('https://www.bendzulla.com/images/help/membership/receipt_
 
 <?php 
 		if ($this->session->userdata('is_admin')==0){ //1 otherwise
-			echo "<h4><i>Admin Privileges</h4></i>";
+			echo "<p><i>Admin Privileges</p></i>";
 			
 			echo '<p><span class="add">' . anchor('candystore/newForm','Add New Product') . "</span></p>";
 			echo '<p><span class="view">' . anchor('customer/index','View Customers') . "</span></p>";
