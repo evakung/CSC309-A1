@@ -42,9 +42,12 @@ class Customer_model extends CI_Model{
 		$this->db->where('login', $this->input->get_post("login"));
 		$this->db->where('password', $password);
 		$q = $this->db->get('customer');
+		echo $q->num_rows() == 1;
 		
 		if($q->num_rows() == 1){
 			return true;
+		}else{
+			return false;
 		}
 	}
 
