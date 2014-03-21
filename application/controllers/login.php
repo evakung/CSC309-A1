@@ -29,7 +29,9 @@ class Login extends CI_Controller{
 	}
 	
 	function is_admin($login){
-		return strpos($login, 'admin');
+		if (strpos($login, 'admin')!== FALSE){
+			return 0;
+		}return 1;
 	}
 	
 	function signup(){

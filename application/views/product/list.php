@@ -38,8 +38,15 @@ a:visited:hover{
 </div>
 
 <?php 
-		echo "<p>" . anchor('candystore/newForm','Add New') . "</p>";
-		echo "<p>" . anchor('customer/index','come here') . "</p>";
+		if ($this->session->userdata('is_admin')==0){ //1 otherwise
+			echo "Admin Privledges";
+			
+			echo "<p>" . anchor('candystore/newForm','Add New Product') . "</p>";
+			echo "<p>" . anchor('customer/index','View Customers') . "</p>";
+			echo "<p>" . anchor('order/index','View Orders') . "</p>";
+			
+		}
+		
 		
 		if($this->session->userdata('is_logged_in')==true){
 			echo "<p>" . anchor('shoppingcart/view_shopping_cart','cart') . "</p>";
@@ -50,8 +57,7 @@ a:visited:hover{
 		//echo "<p>" . anchor('shoppingcart/view_shopping_cart','cart') . "</p>";
 		
 		
-		echo "<h2> WASSUP   " . $this->session->userdata('login') . "</h2>";
-		echo "<p>here  </p>".$this->session->userdata('is_logged_in');
+		echo "<h2> Current user:   " . $this->session->userdata('login') . "</h2>";
 ?>
 <table class="producttable">
 <?php
@@ -64,14 +70,19 @@ a:visited:hover{
 			echo "<td>" . $product->description . "</td>";
 			echo "<td>" . $product->price . "</td>";
 			echo "<td><img src='" . base_url() . "images/product/" . $product->photo_url . "' width='100px' /></td>";
-			echo "<td>" . anchor("candystore/delete/$product->id",'Delete',"onClick='return confirm(\"Do you really want to delete this record?\");'") . "</td>";
-			echo "<td> | " . anchor("candystore/editForm/$product->id",'Edit') . "</td>";
+
+			if ($this->session->userdata('is_admin')==0){
+				echo "<td>" . anchor("candystore/delete/$product->id",'Delete',"onClick='return confirm(\"Do you really want to delete this record?\");'") . "</td>";
+				echo "<td> | " . anchor("candystore/editForm/$product->id",'Edit') . "</td>";
+			}
 			echo "<td> | " . anchor("candystore/read/$product->id",'View') . "</td>";
 			echo "<td> | " . anchor("shoppingcart/order_form/$product->id/false",'Order') . "</td>";
 				
 			echo "</tr>";
 		}
 		echo "<table>";
+		
+		echo anchor("login/logout", "logout");
 ?>	
 </body>
 </html>

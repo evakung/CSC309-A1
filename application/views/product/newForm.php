@@ -62,6 +62,6 @@ input{
 ?><br><br>
 
 <?php
-echo "<b><p>" . anchor('customer/index','<< Back') . "</p></b>";
+echo "<b><p>" . anchor('candystore/index','<< Back') . "</p></b>";
 ?>
 
