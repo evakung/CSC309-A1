@@ -51,8 +51,7 @@ echo "<p>Note: Please double check on your order details and press confirm to pr
 
 // $order_info  -- the variable that youare going to display infrom from. ie. $order_info->order_date etc.
 $cart = $this->session->userdata('cart'); // The info of all the items -- need to loop first, then call our the items ie. item['name']
-print_r($this->session->all_userdata());
-echo "<br>ORDER INFORMATION<br>";
+echo "<br><br><br>";
 echo "<table>";	
 echo "<tr><th>Name</th><th>Quantity</th><th>Description</th><th>Price</th><th>Total</th></tr>";
 	foreach($cart as $items){
@@ -63,22 +62,26 @@ echo "<tr><th>Name</th><th>Quantity</th><th>Description</th><th>Price</th><th>To
 		echo "<td>".$items['price']."</td>";	
 		echo "<td>".$items['subtotal']."</td>";
 }
+echo "<tr> Order Information </tr>";
 echo "</table>";
-echo "PAYMENT INFORMATION";
+echo "<br><br><br>";
 
-echo $order_info->cid;
-echo $order_info->date;
-echo $order_info->time;
-echo $order_info->total;
-echo $order_info->credit_num;
-echo $order_info->credit_month;
-echo $order_info->credit_year;
+echo "<table>";
+echo "<tr><th>Customer ID</th><th>Order Date</th><th>Order Time</th><th>Card Number</th><th>Expiry Date</th></tr>";
+echo "<tr>";
+echo "<td>".$order_info->cid."</td>";
+echo "<td>".$order_info->date."</td>";
+echo "<td>".$order_info->time."</td>";
+echo "<td>".$order_info->credit_num."</td>";
+echo "<td>".$order_info->credit_month."/".$order_info->credit_year."</td>";
+echo "<tr> Payment Information </tr>";
+echo "</table>";
 
 echo form_open('item/create');
 echo form_submit('submit', 'Confirm ');
 echo form_close();
 
 		echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
- echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+ echo "<p>" . anchor('shoppingcart/purchase','<< Back') . "</p>";
 ?>
 

@@ -12,7 +12,7 @@
 }
 
 body{
-	background-image: url('<?php echo $bg; ?>'); 
+	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
 }
 
 table{
@@ -44,7 +44,7 @@ a:visited:hover{
 <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395344671.png" /></div>
 
 <?php 
-echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+//echo "<p>" . anchor('customer/index','<< Back') . "</p>";
 
 echo form_open_multipart('order/create');
 ?><br>
@@ -73,4 +73,6 @@ if(isset($fileerror))
 	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 	echo form_submit('submit', 'Submit Payment Information');
 	echo form_close();
+	echo "<br><br><br><p>" . anchor('shoppingcart/view_shopping_cart','<< Back') . "</p>";
+
 ?>	

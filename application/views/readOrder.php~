@@ -62,7 +62,7 @@ echo "<table>";
 				
 			echo "</tr>";
 		echo "</table>";
-echo "<p>" . anchor('candystore/order','<< Back') . "</p>";
+echo "<p>" . anchor('candystore/index','<< Back') . "</p>";
 	
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>

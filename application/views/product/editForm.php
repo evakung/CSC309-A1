@@ -1,8 +1,6 @@
 <html>
 <head>
-<?php 
-	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
-?>
+<?php $bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";?>
 </head>
 
 <style type="text/css">
@@ -13,7 +11,8 @@
 }
 
 body{
-	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
+	background-image: url('<?php echo $bg; ?>'); 
+	background-attachment: fixed;
 }
 
 input{ 
@@ -24,12 +23,15 @@ input{
 a:hover{
 	color:white;
 }
+
 a:visited{
 	color:#663366;
 }
+
 a:visited:hover{
 	color:white;
 }
+
 .logout{
 	position:absolute;
 	font-size:20px;
@@ -45,10 +47,7 @@ a:visited:hover{
 </div>
 
 <?php 
-	
-	
 	echo form_open("candystore/update/$product->id");
-	
 	echo form_label('Name'); 
 	echo form_error('name');
 	echo form_input('name',$product->name,"required");
