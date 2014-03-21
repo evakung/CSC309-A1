@@ -3,7 +3,9 @@ class Customer extends CI_Controller{
 	function index(){
 		$this->load->model('customer_model');
 		$customers = $this->customer_model->getAll();
-		$data['customers'] = $customers;
+		$empty = empty($customers);
+		//NEED TO HANDLE IF THE ARRAY IS EMPTY
+		$data = array("customers"=>$customer, "ifempty"=>$empty);
 		$this->load->view('customer/index.php', $data);
 	}
 	
@@ -108,5 +110,15 @@ class Customer extends CI_Controller{
 		
 		//Then we redirect to the index page again
 		redirect('customer/index', 'refresh');
+	}
+	
+	function deleteAll(){
+		$this->load->model('customer_model');
+		$users = $this->customer_model->getAll();
+		foreach($users as $user){
+			$this->customer_model->delete($user->id);
+		}
+		
+		$this->load->view("customer/index");
 	}
 }

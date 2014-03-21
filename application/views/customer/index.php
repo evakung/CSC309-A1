@@ -45,6 +45,8 @@ a:visited:hover{
 	echo "<p>" . anchor('candystore/index','Home') . "</p>";
 
 
+	
+	echo "<p>" . anchor('customer/deleteAll','Delete All') . "</p>";
 	echo "<table>";
 	echo "<tr><th>First</th><th>LAst</th><th>login</th><th>password</th><th>email</th></tr>";
 	
