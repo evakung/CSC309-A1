@@ -48,24 +48,23 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'bungle07.cs.toronto.edu';
-$db['default']['username'] = 'g3michhy';
-$db['default']['password'] = '22915166';
++$db['default']['hostname'] = 'bungle07.cs.toronto.edu';
++$db['default']['username'] = 'g3michhy';
++$db['default']['password'] = '22915166';
++$db['default']['database'] = 'g3michhy';  
++$db['default']['dbdriver'] = 'mysql';
++$db['default']['dbprefix'] = '';
++$db['default']['pconnect'] = TRUE;
++$db['default']['db_debug'] = FALSE;
++$db['default']['cache_on'] = FALSE;
++$db['default']['cachedir'] = '';
++$db['default']['char_set'] = 'utf8';
++$db['default']['dbcollat'] = 'utf8_general_ci';
++$db['default']['swap_pre'] = '';
++$db['default']['autoinit'] = TRUE;
++$db['default']['stricton'] = FALSE;
 
-$db['default']['database'] = 'g3michyy';
-/*$db['default']['password'] = '51336485';
-$db['default']['database'] = 'g3ekungg';  */
-$db['default']['dbdriver'] = 'mysql';
-$db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
-$db['default']['db_debug'] = FALSE;
-$db['default']['cache_on'] = FALSE;
-$db['default']['cachedir'] = '';
-$db['default']['char_set'] = 'utf8';
-$db['default']['dbcollat'] = 'utf8_general_ci';
-$db['default']['swap_pre'] = '';
-$db['default']['autoinit'] = TRUE;
-$db['default']['stricton'] = FALSE;
+
 
 
 /* End of file database.php */
