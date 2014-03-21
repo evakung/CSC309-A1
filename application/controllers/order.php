@@ -21,8 +21,9 @@ class Order extends CI_Controller{
 		$this->load->model('order_model');
 		$order = new Order();
 		$order->cid = $cid;
-		$order->date = "CURRENT_DATE()";
-		$order->time = "CURRENT_TIME()";
+		$order->date = date('Y-m-d');
+		$order->time = time();
+		/*date('Y-m-d'), 'order_time' => time(),*/
 		$order->total = $this->get_total();
 		$order->credit_num = $this->input->get_post('creditcard_number');
 		$order->credit_month = $this->input->get_post('creditcard_month');
