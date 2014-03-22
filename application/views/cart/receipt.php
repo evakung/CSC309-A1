@@ -76,7 +76,18 @@ a:visited:hover{
  <?php echo "TOTAL : $"; ?>
  <?php echo $order_info->total;?>
   </br> </br>
- <?php
+
+ <button onclick="print()">Print My Receipt</button>
+ 
+ <script>
+ function print()
+ {
+ 	window.print();
+ }
+ </script>
+ 
+  
+  <?php
 
 
 
