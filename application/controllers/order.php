@@ -61,18 +61,28 @@ class Order extends CI_Controller{
 	}
 	
 	function delete($id) {
-		$this->load->model('order_model','item_model');
-	
-		if (isset($id))
-			//delete order_items TODO
-			
+		$this->load->model('order_model');
+		if (isset($id)){
+			$this->delete_item($id); //deletes the order_items that are associated with the order
 			$this->order_model->delete($id);
-	
+		}			
 		//Then we redirect to the index page again
 		redirect('order/index', 'refresh');
 	}
 	
 	
+	function delete_item($oid){
+		$this->load->model('item_model');
+		$items = $this->item_model->getAll();
+		$customerOrderId = Array();
+		foreach ($items as $item){
+			if( $item->order_id == $oid){
+				$this->item_model->delete($item->id);
+			}
+		}
+			
+	
+	}
 	
 	
 }
