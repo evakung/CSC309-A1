@@ -40,6 +40,17 @@ a:visited:hover{
 
 }
 
+.back{
+
+	background-image: url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
+}
+
+.backbutton{
+	width:1300px;
+}
+
 </style>
 
 <div align="center">
@@ -52,6 +63,6 @@ a:visited:hover{
 
 <?php echo 
 	anchor('login', 'Login Now');
-	echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+	echo '<div class="backbutton"><p><span class="back">' . anchor('login/index','Back') . "</span></p></div>";
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>

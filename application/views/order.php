@@ -38,10 +38,31 @@ a:visited:hover{
    	right:50;
 
 }
+.back{
+
+	background-image: url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
+}
+
+.backbutton{
+	display:inline;
+	float:left;
+	width:1200px;
+
+}
+
+.logout{
+	position:absolute;
+	font-size:20px;
+	top:20;
+   	right:50;
+
+}
 </style>
  <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395429226.png" /></a></div>
 
-<h1>All orders</h1>
+<h1>All Checked Out Orders</h1>
 
 
 
@@ -67,7 +88,7 @@ a:visited:hover{
 			echo "</tr>";
 		}
 		echo "<table>";
-		echo "<p>" . anchor('candystore/index','<< Back') . " | ";
+		echo '<div class="backbutton"><p><span class="back">'. anchor('candystore/index','Back')."</span></div></p>" ;
 		
-		echo "<b>" . anchor("login/logout", "Logout") . "</b></p>";
+	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>	

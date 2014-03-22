@@ -19,16 +19,18 @@ body{
 	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
 }
 
-
 a:hover{
 	color:white;
 }
+
 a:visited{
 	color:#663366;
 }
+
 a:visited:hover{
 	color:white;
 }
+
 .logout{
 	position:absolute;
 	font-size:20px;
@@ -36,19 +38,35 @@ a:visited:hover{
    	right:50;
 
 }
+.backbuttonicon{
+	background-image: url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
+	
+	
+}
+
+.backbutton{
+
+	width:1000px;
+	text-align:center;
+}
+
+.delete{
+	float:right;
+	width:1200px;
+}
 </style>
 
- <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395309189.png" /></div>
-<h1>HARO</h1>
+<div align="center">
+	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395309189.png" />
+</div>
+
 <?php 
 	// echo "<p>" . anchor('customer/newForm','Add new user') . "</p>";    Admins do not make new customers
-	echo "<p>" . anchor('candystore/index','Home') . "</p>";
-
-
-	
-	echo "<p>" . anchor('customer/deleteAll','Delete All') . "</p>";
+	echo '<p>' . anchor('customer/deleteAll','Delete All') . "</p>";
 	echo "<table>";
-	echo "<tr><th>First</th><th>LAst</th><th>login</th><th>password</th><th>email</th></tr>";
+	echo "<tr><th>First Name </th><th>Last Name </th><th>Login Username </th><th>Password </th><th>Email </th></tr>";
 	
 	if (isset($customers)){
 		foreach ($customers as $customer) {
@@ -69,4 +87,10 @@ a:visited:hover{
 	}
 	echo "<table>";
 	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';	
+	echo '<p><div class="delete">' . anchor('customer/deleteAll','Delete All') . "</p></div>";
+	echo '<div class="backbutton"><p><span class="backbuttonicon">' . anchor('candystore/index','Back') . "</p></span></div>";
+
+
+	
+	
 ?>

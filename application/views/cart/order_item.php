@@ -48,10 +48,10 @@ a:visited:hover{
 <?php 
 	
 
-	echo "<p> ID = " . $product->id . "</p>";
-	echo "<p> NAME = " . $product->name . "</p>";
-	echo "<p> Description = " . $product->description . "</p>";
-	echo "<p> Price = " . $product->price . "</p>";
+	echo "<p> Product ID: " . $product->id . "</p>";
+	echo "<p> Name: " . $product->name . "</p>";
+	echo "<p> Description: " . $product->description . "</p>";
+	echo "<p> Item Price: " . $product->price . "</p>";
 	echo "<p><img src='" . base_url() . "images/product/" . $product->photo_url . "' width='100px'/></p>";
 
 	

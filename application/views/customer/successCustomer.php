@@ -47,6 +47,10 @@ a:visited:hover{
 	padding-left: 30px;  
 }
 
+.backbutton{
+	width:1300px;
+}
+
 </style>
 
 <div align="center">
@@ -59,6 +63,6 @@ a:visited:hover{
 
 <?php echo 
 	anchor('login', 'Login Now');
-	echo '<p><span class="back">' . anchor('login/index','Back') . "</span></p>";
+	echo '<div class="backbutton"><p><span class="back">' . anchor('login/index','Back') . "</span></p></div>";
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>

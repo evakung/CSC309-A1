@@ -46,13 +46,14 @@ a:visited:hover{
 </style>
 <body>
 	<div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395302158.png" /></div>
-<h2>Product Entry</h2>
+<h2>Item Details</h2>
+
 <?php 
 
-	echo "<p> ID = " . $product->id . "</p>";
-	echo "<p> NAME = " . $product->name . "</p>";
-	echo "<p> Description = " . $product->description . "</p>";
-	echo "<p> Price = " . $product->price . "</p>";
+	echo "<p> Product ID: " . $product->id . "</p>";
+	echo "<p> Name: " . $product->name . "</p>";
+	echo "<p> Description: " . $product->description . "</p>";
+	echo "<p> Item Price: " . $product->price . "</p>";
 	echo "<p><img src='" . base_url() . "images/product/" . $product->photo_url . "' width='100px'/></p>";
 		
 ?>	
