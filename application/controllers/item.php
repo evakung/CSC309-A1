@@ -27,21 +27,23 @@ class Item extends CI_Controller{
 				}else{
 					$count++;
 				}
-				
 			}
 			if ($count == count($cart)){
 				$this->load->view('cart/empty_cart.php');
 			}else{
+	
 				//empty the cart
 				
-				//$order_id = $this->session->userdata('order_id');
-				//$order = $this->order_model->get($order_id);
-				
-				
-				$data = array('cart'=>$cart);
+				$order_id = $this->session->userdata('order_id');
+				$order = $this->order_model->get($order_id);
+				$order_value = $order[0];
+				$data = array('cart'=>$cart,'order_info'=>$order_value);
 				$empty_cart = array();
 				//$this->session->set_userdata('cart', $empty_cart);
 				$this->load->view('cart/receipt.php', $data);
+				
+				
+				
 			}
 		}
 	}
