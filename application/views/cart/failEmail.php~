@@ -1,7 +1,9 @@
 <html>
 <head>
 
-<?php $bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";?>
+<?php 
+	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
+?>
 <style type="text/css">
 *{
 	font-family:fantasy;

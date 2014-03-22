@@ -1,9 +1,7 @@
 <html>
 <head>
 
-<?php 
-	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
-?>
+<?php $bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";?>
 <style type="text/css">
 *{
 	font-family:fantasy;
@@ -12,7 +10,8 @@
 }
 
 body{
-	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
+	background-image: url('<?php echo $bg; ?>'); 
+	background-attachment: fixed;
 }
 
 table{
@@ -95,7 +94,7 @@ a:visited:hover{
 	<tr>
 	  <td><?php echo $items['quantity']; ?></td>
 	  <td>
-		<?php echo $items['name']; ?>
+		<?php echo $items['name']; ?>Year
 
 			<?php if ($this->cart->has_options($items['name']) == TRUE): ?>
 

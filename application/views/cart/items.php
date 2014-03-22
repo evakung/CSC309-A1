@@ -10,7 +10,8 @@
 }
 
 body{
-	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
+	background-image: url('<?php echo $bg; ?>'); 
+	background-attachment: fixed;
 }
 
 table{
@@ -20,12 +21,15 @@ table{
 a:hover{
 	color:white;
 }
+
 a:visited{
 	color:#663366;
 }
+
 a:visited:hover{
 	color:white;
 }
+
 .logout{
 	position:absolute;
 	font-size:20px;
@@ -33,12 +37,14 @@ a:visited:hover{
    	right:50;
 
 }
+
 .back{
 
 	background-image: url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
   	background-repeat: no-repeat;
 	padding-left: 30px;  
 }
+
 .cart{	
  	background-image: url('http://zurametals.com/wp-content/themes/zurametals/images/cart-icon.png');
   	background-repeat: no-repeat;
@@ -50,6 +56,7 @@ a:visited:hover{
 	display:inline;
 	float:left;
 }
+
 .cartbutton{
 	display:inline;
 	width:2000px;
@@ -63,6 +70,7 @@ a:visited:hover{
 <div align="center">
 	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395343118.png" />
 </div>
+
 <h2> Your cart has just been updated! </h2>
 
 <table cellpadding="6" cellspacing="1" style="width:50%" border="0">
