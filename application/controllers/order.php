@@ -12,11 +12,7 @@ class Order extends CI_Controller{
 	
 	function create(){
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('creditcard_number', 'Card Number', 'required|exact_length[16]');
-		$this->form_validation->set_rules('creditcard_month', 'Expiry Month', 'required|exact_length[2]');
-		//|regex_match[(0[1-9]|1[0-2])]
-		$this->form_validation->set_rules('creditcard_year', 'Expiry Year', 'required|exact_length[2]');
-		//|regex_match[(0[1-9]|[12][0-9]|3[01])]
+		
 		
 
 	$cart = $this->session->userdata('cart');
@@ -29,9 +25,13 @@ class Order extends CI_Controller{
 			$cid= $row->id;
 		}
 		
-		
+		//$this->form_validation->set_rules('creditcard_number', 'Card Number', 'required|exact_length[16]');
+		//$this->form_validation->set_rules('creditcard_month', 'Expiry Month', 'required|exact_length[2]');
+		//|regex_match[(0[1-9]|1[0-2])]
+		//$this->form_validation->set_rules('creditcard_year', 'Expiry Year', 'required|exact_length[2]');
+		//|regex_match[(0[1-9]|[12][0-9]|3[01])]
 
-		if($this->form_validation->run()==true) {
+		//if($this->form_validation->run()) {
 			// NEED TO CREATE NEW ORDER AND INSERT INTO DB
 			$this->load->model('order_model');
 			$order = new Order();
@@ -50,7 +50,7 @@ class Order extends CI_Controller{
 			$this->session->set_userdata('order_id', $result);
 			$data['order_info'] = $order;
 			$this->load->view('cart/confirm_purchase.php', $data);
-		}
+		//}
 	}
 	
 	function get_total(){
