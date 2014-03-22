@@ -12,7 +12,7 @@
 }
 
 body{
-	background-image: url('<?php echo $bg; ?>'); 
+	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
 }
 
 table{
@@ -69,6 +69,7 @@ a:visited:hover{
 
 
 <?php 
+		echo "<h2> Hello " . $this->session->userdata('login') . " ! </h2><br>";
 		if ($this->session->userdata('is_admin')==0){ //1 otherwise
 			echo "<p><i>Admin Privileges</p></i>";
 			
@@ -87,8 +88,8 @@ a:visited:hover{
 		}
 		//echo "<p>" . anchor('shoppingcart/view_shopping_cart','cart') . "</p>";
 		
+		//echo "<br><h2> Hello " . $this->session->userdata('login') . " ! </h2><br><br>";
 		
-		echo "<h2> Hello " . $this->session->userdata('login') . " ! </h2>";
 ?>
 <table class="producttable">
 <?php

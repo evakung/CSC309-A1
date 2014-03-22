@@ -38,6 +38,12 @@ a:visited:hover{
    	right:50;
 
 }
+.home{
+
+	background-image: url('https://cdn2.iconfinder.com/data/icons/freecns-cumulus/16/519941-001_Home-16.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
+}
 
 </style>
 <body>
@@ -123,8 +129,8 @@ onClick="writeMTable()">
  
   
   <?php
-echo "<p>" . anchor('candystore/index',' Back to the Candyshop') . "</p>";
-echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
+echo '<p><span class="home">' . anchor('candystore/index',' Back to the Candyshop') . "</p></span>";
+echo '<p><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 </body>
 </html>
