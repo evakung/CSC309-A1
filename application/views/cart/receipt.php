@@ -66,10 +66,12 @@ a:visited:hover{
  <table>
  	<tr><td>Quantity</td><td>Item</td><td>Price</td><td>Sub-Total</td></tr>
  	<?php foreach($cart as $item):?>
+ 		<tr>
  		<td><?php echo $item['quantity'];?>		</td>
  		<td><?php echo $item['name'];?>			</td>
  		<td>$<?php echo $item['price'];?>		</td>
  		<td>$<?php echo $item['subtotal'];?>	</td>
+ 		</tr>
  	<?php endforeach;?>
  </table>
   </br> </br> </br> </br>
@@ -77,17 +79,24 @@ a:visited:hover{
  <?php echo $order_info->total;?>
   </br> </br>
 
- <button onclick="print()">Print this page</button>
- <form>
+  
+  
+  <?php 
+	echo form_open('mail/index');
+	
+	
+	echo form_submit('submit', 'Create');
+	echo form_close();
+    
+  ?>
+
+
 <input type=button value="Print Receipt Style"
 onClick="writeMTable()">
 </form>
  
  <script>
- function print()
- {
- 	window.print();
- }
+
 
  function writeMTable() {
 	 top.wRef=window.open('','myconsole',
@@ -111,8 +120,8 @@ onClick="writeMTable()">
 	 	+'</tr><tr><td>Order Date</td><td><?php echo $order_info->order_date;?></td>'
 	 	+'</tr><tr><td>Order Time</td><td><?php echo $order_info->order_time;?></td></tr><tr>'
 	+ '</table><h3>Items</h3><table><tr><td>Quantity</td><td>Item</td><td>Price</td><td>Sub-Total</td></tr>'
-	 	+'<?php foreach($cart as $item):?><td><?php echo $item['quantity'];?></td><td><?php echo $item['name'];?></td>'
-	 	+'	<td>$<?php echo $item['price'];?></td><td>$<?php echo $item['subtotal'];?>	</td><?php endforeach;?>'
+	 	+'<?php foreach($cart as $item):?><tr><td><?php echo $item['quantity'];?></td><td><?php echo $item['name'];?></td>'
+	 	+'	<td>$<?php echo $item['price'];?></td><td>$<?php echo $item['subtotal'];?>	</td></tr><?php endforeach;?>'
 	+' </table></br> </br> </br> </br> <?php echo "TOTAL : $"; ?> <?php echo $order_info->total;?></br> </br>'
 	 )
 	 
