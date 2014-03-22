@@ -18,6 +18,10 @@ class Item_model extends CI_Model{
 		return $q->row(0,'Item');
 	}
 
+
+
+	
+	
 	function delete($id){
 		return $this->db->delete("order_item", array('id'=>$id));
 	}

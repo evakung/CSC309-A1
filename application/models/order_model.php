@@ -23,6 +23,8 @@ class Order_model extends CI_Model{
 		return  $q->result();
 	}
 
+	
+	
 	function delete($id){
 		return $this->db->delete("order", array('id'=>$id));
 	}

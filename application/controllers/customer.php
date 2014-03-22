@@ -113,12 +113,51 @@ class Customer extends CI_Controller{
 	}
 	
 	function deleteAll(){
-		$this->load->model('customer_model');
-		$users = $this->customer_model->getAll();
+		$this->load->model('order_model');
+		$users = $this->getCustomers();
 		foreach($users as $user){
-			$this->customer_model->delete($user->id);
+			if(strpos($user->login, 'admin') === FALSE){
+				$orderIDs = $this->getOrders($user->id);
+				if (isset($orderIDs)){ // TODO to be copied into customer delete as well
+					foreach ($orderIDs as $orderID){ 	//  Deletes orders & the order Items
+						$this->delete_item($orderID);
+						$this->order_model->delete($orderID);
+					}
+				}
+				$this->customer_model->delete($user->id);			
+			}
 		}
+		redirect("customer/index", 'refresh');
+	}
+	
+	function getCustomers(){
+		$this->load->model('customer_model');
+		return $this->customer_model->getAll();
+	}
+	
+	function getOrders($cid){
+		$this->load->model('order_model');
+		$orders = $this->order_model->getAll();
+		$customerOrderId = Array();
+		foreach ($orders as $order){
+			if( $order->customer_id == $cid){
+				array_push($customerOrderId, $order->id);
+			}
+		}
+		return $customerOrderId;
 		
-		$this->load->view("customer/index");
+	}
+	
+	function delete_item($oid){
+		$this->load->model('item_model');
+		$items = $this->item_model->getAll();
+		$customerOrderId = Array();
+		foreach ($items as $item){
+			if( $item->order_id == $oid){
+				$this->item_model->delete($item->id);
+			}
+		}
+			
+		
 	}
 }
