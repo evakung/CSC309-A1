@@ -3,9 +3,9 @@ class Customer extends CI_Controller{
 	function index(){
 		$this->load->model('customer_model');
 		$customers = $this->customer_model->getAll();
-		$empty = empty($customers);
+		$empty=0;
 		//NEED TO HANDLE IF THE ARRAY IS EMPTY
-		$data = array("customers"=>$customer, "ifempty"=>$empty);
+		$data = array("customers"=>$customers,"empty"=>$empty);
 		$this->load->view('customer/index.php', $data);
 	}
 	
