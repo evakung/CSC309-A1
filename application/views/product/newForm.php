@@ -51,7 +51,6 @@ a:visited:hover{
 </div>
 <div margin="auto">
 <?php 
-	"<p>"
 	
 	echo form_open_multipart('candystore/create');
 		
