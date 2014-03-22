@@ -64,7 +64,7 @@ a:visited:hover{
 
 <?php 
 	// echo "<p>" . anchor('customer/newForm','Add new user') . "</p>";    Admins do not make new customers
-	echo '<p>' . anchor('customer/deleteAll','Delete All') . "</p>";
+	//echo '<p>' . anchor('customer/deleteAll','Delete All') . "</p>";
 	echo "<table>";
 	echo "<tr><th>First Name </th><th>Last Name </th><th>Login Username </th><th>Password </th><th>Email </th></tr>";
 	

@@ -42,14 +42,21 @@ a:visited:hover{
 
 </style>
 
- <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395422745.png" /></a></div>
+ <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395422745.png" /></a>
+ 	
+ </div>
 
 
 
 <h2>Cannot process payment because your cart is empty!</h2>
+<?php echo '<p id="icon"><b>' . anchor("candystore/index", "Shop More!") . '</span></p>'; 
+?>
 
+</div>
 <?php 
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 
 ?>
+
+
 

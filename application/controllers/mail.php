@@ -26,10 +26,6 @@ class Mail extends CI_Controller{
 		$this->email->to($userInfo->email);
 		$this->email->subject("Meva CandyShop Order Receipt");
 		
-		
-		
-		
-		
 		$this->email->message($this->getMessage());
 		
 		if($this->email->send()){
@@ -49,6 +45,8 @@ class Mail extends CI_Controller{
 		$items = $this->getItemInfo($orderInformation->id);
 		$itemList = "";
 		$total = 0;
+		
+		print_r($orderInformation);
 		foreach($items as $item){ // check for q = 0
 			$this->load->model("product_model");
 			$product = $this->product_model->get($item->product_id);
@@ -81,11 +79,14 @@ class Mail extends CI_Controller{
 		
 		$this->load->model('order_model');
 		$orders = $this->order_model->getAll();
+		$allOrders = Array();
 		foreach ($orders as $order){
 			if( $order->customer_id == $cid){
-				return $order;
+				array_push($allOrders,$order);
 			}
 		}
+		return array_pop($allOrders);
+	
 	}
 	
 	function getItemInfo($oid){
