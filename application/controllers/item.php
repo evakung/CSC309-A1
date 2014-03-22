@@ -39,7 +39,7 @@ class Item extends CI_Controller{
 				$order_value = $order[0];
 				$data = array('cart'=>$cart,'order_info'=>$order_value);
 				$empty_cart = array();
-				//$this->session->set_userdata('cart', $empty_cart);
+				$this->session->set_userdata('cart', $empty_cart); //For faster testing, comment this out
 				$this->load->view('cart/receipt.php', $data);
 				
 				
