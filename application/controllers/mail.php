@@ -46,7 +46,6 @@ class Mail extends CI_Controller{
 		$itemList = "";
 		$total = 0;
 		
-		print_r($orderInformation);
 		foreach($items as $item){ // check for q = 0
 			$this->load->model("product_model");
 			$product = $this->product_model->get($item->product_id);
