@@ -41,7 +41,7 @@ a:visited:hover{
  <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395309189.png" /></div>
 <h1>HARO</h1>
 <?php 
-	echo "<p>" . anchor('customer/newForm','Add new user') . "</p>";
+	// echo "<p>" . anchor('customer/newForm','Add new user') . "</p>";    Admins do not make new customers
 	echo "<p>" . anchor('candystore/index','Home') . "</p>";
 
 
