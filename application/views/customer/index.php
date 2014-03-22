@@ -16,7 +16,8 @@
 
 
 body{
-	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
+	background-image: url('<?php echo $bg; ?>'); 
+	background-attachment: fixed;
 }
 
 
@@ -36,6 +37,13 @@ a:visited:hover{
    	right:50;
 
 }
+
+.back{
+	background-image:url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+	background-repeat:no-repeat;
+	padding-left:30px;
+}
+
 </style>
 
  <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395309189.png" /></div>
@@ -48,7 +56,7 @@ a:visited:hover{
 	
 	echo "<p>" . anchor('customer/deleteAll','Delete All') . "</p>";
 	echo "<table>";
-	echo "<tr><th>First</th><th>LAst</th><th>login</th><th>password</th><th>email</th></tr>";
+	echo "<tr><th>First Name</th><th>Last Name</th><th>Login Username</th><th>Password</th><th>Email</th></tr>";
 	
 	if (isset($customers)){
 		foreach ($customers as $customer) {
@@ -68,5 +76,6 @@ a:visited:hover{
 		}	
 	}
 	echo "<table>";
+	echo '<p><span class="back">' . anchor('candystore/index','Back') . "</span></p>"; 
 	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';	
 ?>

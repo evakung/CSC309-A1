@@ -28,6 +28,13 @@ a:visited{
 a:visited:hover{
 	color:white;
 }
+
+.back{
+	background-image:url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+	background-repeat:no-repeat;
+	padding-left:30px;
+}
+
 </style>
 
 </head>
@@ -36,4 +43,4 @@ a:visited:hover{
 </div>
 <p>Your log in has failed, you have have entered an incorrecct username and/or password. <br>Please try again.</p>
 <br><br><br>
-<?php echo "<p>" . anchor('login/index','<< Back') . "</p>";?>
+<?php echo '<p><span class="back">' . anchor('login/index','Back') . "</p>";?>

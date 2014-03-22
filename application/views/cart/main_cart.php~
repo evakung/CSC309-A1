@@ -13,6 +13,7 @@
 
 body{
 	background-image: url('<?php echo $bg; ?>'); 
+	background-attachment: fixed;
 }
 
 table{
@@ -25,18 +26,34 @@ p{
 a:hover{
 	color:white;
 }
+
 a:visited{
 	color:#663366;
 }
+
 a:visited:hover{
 	color:white;
 }
+
 .logout{
 	position:absolute;
 	font-size:20px;
 	top:20;
    	right:50;
 
+}
+
+.back{
+	background-image:url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+	background-repeat:no-repeat;
+	padding-left:30px;
+}
+
+.vieworder{
+
+	background-image: url('https://www.bendzulla.com/images/help/membership/receipt_button.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
 }
 </style>
 
@@ -110,9 +127,8 @@ a:visited:hover{
 </table>
 <br><br><br>
 <?php 
-	echo "<p>" . anchor('candystore/index','<< Back') . "</p>";
-	echo " | ";
-	echo "<p>" . anchor('shoppingcart/purchase','Final Order Details >>') . "</p>";
+	echo '<p><span class="back">' . anchor('candystore/index','Back') . "";
+	echo '<span class="vieworder">' . anchor('shoppingcart/purchase','Final Order Details') . "</span></p>";
 	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 </body>

@@ -10,7 +10,8 @@
 }
 
 body{
-	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
+	background-image: url('<?php echo $bg; ?>'); 
+	background-attachment: fixed;
 }
 
 table{
@@ -20,18 +21,33 @@ table{
 a:hover{
 	color:white;
 }
+
 a:visited{
 	color:#663366;
 }
+
 a:visited:hover{
 	color:white;
 }
+
 .logout{
 	position:absolute;
 	font-size:20px;
 	top:20;
    	right:50;
 
+}
+
+.back{
+	background-image:url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+	background-repeat:no-repeat;
+	padding-left:30px;
+}
+
+.cart{	
+ 	background-image: url('http://zurametals.com/wp-content/themes/zurametals/images/cart-icon.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
 }
 </style>
 
@@ -84,14 +100,14 @@ a:visited:hover{
 <tr>
   <td colspan="2"> </td>
   <td colspan="1"> </td>
-  <td class="right"><strong>Total</strong>: $<?php echo $total; ?></td>
+  <td class="right"><strong>Total</strong>: $<?php echo $total; ?></td> <!-- NEED TO FIX THE TOTAL VALUE --> 
   
 </tr>
 
 </table>
 <br><br>
-<?php echo "<p>" . anchor('candystore/index','<< Back') . "</p>";?>
-<?php echo "<p>" . anchor('shoppingcart/view_shopping_cart','>> View Cart') . "</p>";
+<?php echo '<p><span class="back">'. anchor('candystore/index','Back') . "</p>";?>
+<?php echo '<p><span class="cart">'. anchor('shoppingcart/view_shopping_cart','View Cart') . "</span></p>";
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 

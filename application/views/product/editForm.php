@@ -39,6 +39,11 @@ a:visited:hover{
    	right:50;
 
 }
+.back{
+	background-image:url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+	background-repeat:no-repeat;
+	padding-left:30px;
+}
 
 </style>
 
@@ -53,7 +58,7 @@ a:visited:hover{
 	echo form_input('name',$product->name,"required");
 ?>
 <br>
-<?php
+<?phpdfd
 	echo form_label('Description');
 	echo form_error('description');
 	echo form_input('description',$product->description,"required");
@@ -71,7 +76,7 @@ a:visited:hover{
 ?>	
 <br><br>
 <?php
-echo "<p>" . anchor('candystore/index','<< Back') . "</p>";
+echo '<p><span class="back">' . anchor('candystore/index','Back') . "</span></p>";
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 </body>

@@ -1,12 +1,9 @@
 <html>
 <head>
 
-<?php 
-	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
-?>
+<?php $bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";?>
 
 </head>
-
 <style type="text/css">
 *{
 	font-family:fantasy;
@@ -27,12 +24,15 @@ input{
 a:hover{
 	color:white;
 }
+
 a:visited{
 	color:#663366;
 }
+
 a:visited:hover{
 	color:white;
 }
+
 .logout{
 	position:absolute;
 	font-size:20px;
@@ -40,6 +40,13 @@ a:visited:hover{
    	right:50;
 
 }
+
+.back{
+	background-image:url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+	background-repeat:no-repeat;
+	padding-left:30px;
+}
+
 </style>
 
 <div align="center">
@@ -82,7 +89,7 @@ a:visited:hover{
 	echo form_close();
 ?>	
 <?php
-	echo "<p>" . anchor('customer/index','<< Back') . "</p>";
-echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
+	echo '<p><span class="back">'  . anchor('customer/index','Back') . "</p>";
+	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 

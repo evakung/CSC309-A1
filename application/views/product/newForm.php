@@ -38,6 +38,12 @@ a:visited:hover{
 
 }
 
+.back{
+	background-image:url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+	background-repeat:no-repeat;
+	padding-left:30px;
+}
+
 </style>
 <div align="center">
 <img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395302430.png" />
@@ -79,7 +85,7 @@ a:visited:hover{
 	echo form_close();
 ?>
 <br><br>
-<?php echo "<p>" . anchor('candystore/index','<< Back') . "</p>"; 
+<?php echo '<p><span class="back">' . anchor('candystore/index','Back') . "</span></p>"; 
 		echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 

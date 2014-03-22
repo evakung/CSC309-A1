@@ -7,14 +7,13 @@ Eva FanYi Kung, g3ekungg, 998137573
 ---------------------------------------------------------------------------------
 GENERAL USAGE:
 
-Meva's Candy store is an easy to navigate online shopping website. We sell a variety of 
-sweet products for you to choose. Users are prompted to log in otherwise create a 
-new account when they first enter the site. Special privileges are granted to admin/staff
-users that regular customers will not have. 
-
+Meva's Candy store is an easy to navigate online shopping website. Users are
+prompted to log in otherwise create a new account when they first enter the site. 
+Staff or administrator users have special privileges that regular customers will
+not have. We sell a variety of sweet products for you to choose. 
 
 Staff users:
-When logging in as an admin, youre homepage will show all the options in adding, 
+When loging in as an admin, youre homepage will show all the options in adding, 
 deleting, editting, viewing both products and the customers. All registered
 customers and orders going on will be recorded and put on the page for the 
 admin users to see. 

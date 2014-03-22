@@ -1,9 +1,7 @@
 <html>
 <head>
 
-<?php 
-	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
-?>
+<?php $bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";?>
 <style type="text/css">
 *{
 	font-family:fantasy;
@@ -13,6 +11,7 @@
 
 body{
 	background-image: url('<?php echo $bg; ?>'); 
+	background-attachment: fixed;
 }
 
 table{
@@ -25,12 +24,15 @@ p{
 a:hover{
 	color:white;
 }
+
 a:visited{
 	color:#663366;
 }
+
 a:visited:hover{
 	color:white;
 }
+
 .logout{
 	position:absolute;
 	font-size:20px;
@@ -41,12 +43,16 @@ a:visited:hover{
 </style>
 <body>
 
- <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395357042.png" /></div>
+<div align="center">
+	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395357042.png" />
+</div>
 <?php
-echo "FINAL RECEIPT!";
-echo "<p>" . anchor('candystore/index',' Back to the Candyshop') . "</p>";
-echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
+	print_r($cart);
+	echo "<br>FINAL RECEIPT!";
+	echo "<p><br>" . anchor('candystore/index',' Back to the Candyshop') . "</p>";
+	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
+
 </body>
 </html>
 
