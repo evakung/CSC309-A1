@@ -91,14 +91,14 @@ a:visited:hover{
 	echo form_open('mail/index');
 	
 	
-	echo form_submit('submit', 'Create');
+	echo form_submit('submit', 'Email Receipt');
 	echo form_close();
     
   ?>
 
 
 <input type=button value="Print Receipt Style"
-onClick="writeMTable()">
+onClick="writeMTable()"><br/><br/>
 </form>
  
  <script>
