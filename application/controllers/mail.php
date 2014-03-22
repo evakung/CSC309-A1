@@ -10,8 +10,8 @@ class Mail extends CI_Controller{
 					'protocal' => 'smtp',
 					'smtp_host' => 'ssl://smtp.googlemail.com',
 					'smtp_port' => 465,
-					'smtp_user' => 'michelle.liao.93@gmail.com',
-					'smpt_pass' => '55378008Mich',
+					'smtp_user' => 'mevacandyshop@gmail.com',
+					'smpt_pass' => 'candyshop',
 					'charset' => 'utf-8',
         			'wordwrap' => TRUE,
 					'mailtype' =>'html'
@@ -22,7 +22,7 @@ class Mail extends CI_Controller{
 		$this->load->library('email', $config);
 		$this->email->set_newline("\r\n");
 			
-		$this->email->from("michelle.liao.93@gmail.com", "Michelle Liao");
+		$this->email->from("mevacandyshop@gmail.com", "Meva CandyShop");
 		$this->email->to($userInfo->email);
 		$this->email->subject("Meva CandyShop Order Receipt");
 		
