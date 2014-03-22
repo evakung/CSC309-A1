@@ -1,7 +1,7 @@
 MEVAS CANDYSTORE 
 
 Creators: 
-Michelle Liao,g3michyy, <insert # here> 
+Michelle Liao,g3michhy, 999139640 
 
 Eva FanYi Kung, g3ekungg, 998137573
 ---------------------------------------------------------------------------------
