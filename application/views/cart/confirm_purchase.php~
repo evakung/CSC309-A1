@@ -42,6 +42,12 @@ a:visited:hover{
 
 }
 
+.back{
+	background-image:url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+	background-repeat:no-repeat;
+	padding-left:30px;
+}
+
 </style>
 
 </head>
@@ -73,6 +79,7 @@ a:visited:hover{
 </tr>
 
 <?php
+<<<<<<< HEAD
 	echo "<tr> Order Information </tr>";
 	echo "</table>";
 	echo "<br><br><br>";
@@ -93,5 +100,21 @@ a:visited:hover{
 
 	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 	echo '<p><span class="back">' . anchor('shoppingcart/purchase','Back') . "</p>";
+=======
+echo "<p>Note: Please double check on your order details and press confirm to proceeed. </p>";
+
+// $order_info  -- the variable that youare going to display infrom from. ie. $order_info->order_date etc.
+$cart = $this->session->userdata('cart'); // The info of all the items -- need to loop first, then call our the items ie. item['name']
+echo "<br><br><br>";
+
+
+
+echo form_open('item/create');
+echo form_submit('submit', 'Confirm ');
+echo form_close();
+
+		echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
+ echo "<p>" . anchor('shoppingcart/purchase','<< Back') . "</p>";
+>>>>>>> 5177799dc622670b8339413c403fe045ff590289
 ?>
 

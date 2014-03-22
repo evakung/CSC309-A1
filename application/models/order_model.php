@@ -20,7 +20,7 @@ class Order_model extends CI_Model{
 
 	function get($id){
 		$q = $this->db->get_where('order', array('id'=>$id));
-		return $q->row(0,'Order');
+		return  $q->result();
 	}
 
 	function delete($id){
