@@ -1,8 +1,6 @@
 <html>
 <head>
-<?php 
-	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
-?>
+<?php $bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";?>
 <style type="text/css">
 *{
 	font-family:fantasy;
@@ -18,12 +16,15 @@ body{
 a:hover{
 	color:white;
 }
+
 a:visited{
 	color:#663366;
 }
+
 a:visited:hover{
 	color:white;
 }	
+
 .logout{
 	position:absolute;
 	font-size:20px;
@@ -40,9 +41,6 @@ a:visited:hover{
 }
 
 </style>
-
-<!--<h2>add into cart</h2>
--->
 <div align="center">
 <img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395303414.png" /></div>
 <?php 
@@ -53,17 +51,7 @@ a:visited:hover{
 	echo "<p> Description: " . $product->description . "</p>";
 	echo "<p> Item Price: " . $product->price . "</p>";
 	echo "<p><img src='" . base_url() . "images/product/" . $product->photo_url . "' width='100px'/></p>";
-
-	
-	//echo form_open('shoppingcart/get_quantity');
-	//echo form_input('quantity',set_value('quantity'));
-	
-	//echo "<td>" . anchor("shoppingcart/add_into_cart/$product->id",'Order') . "</td>";
-	
-	
 ?>	
-
-
 
 <title>My Form</title>
 </head>

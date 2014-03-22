@@ -1,8 +1,6 @@
 <html>
 <head>
-<?php 
-	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
-?>
+<?php $bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";?>
 </head>
 
 <style type="text/css">
@@ -14,7 +12,8 @@
 
 
 body{
-	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
+	background-image: url('<?php echo $bg; ?>');
+	background-attachment: fixed;
 }
 
 input{ 
@@ -23,8 +22,9 @@ input{
 }
 
 .red {
-color: red;
+	color: red;
 }
+
 .logout{
 	position:absolute;
 	font-size:20px;
@@ -32,15 +32,19 @@ color: red;
    	right:50;
 
 }
+
 a:hover{
 	color:white;
 }
+
 a:visited{
 	color:#663366;
 }
+
 a:visited:hover{
 	color:white;
 }
+
 .back{
 
 	background-image: url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');

@@ -1,8 +1,6 @@
 <html>
 <head>
-<?php 
-	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
-?>
+<?php $bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";?>
 </head>
 
 <style type="text/css">
@@ -14,22 +12,27 @@
 
 
 body{
-	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
+	background-image: url('<?php echo $bg; ?>'); 
+	background-attachment: fixed;
 }
 
 input{ 
 	display: block;
 	margin: 0px auto;
 }
+
 a:hover{
 	color:white;
 }
+
 a:visited{
 	color:#663366;
 }
+
 a:visited:hover{
 	color:white;
 }
+
 .logout{
 	position:absolute;
 	font-size:20px;
@@ -47,9 +50,10 @@ a:visited:hover{
 
 </style>
 <div align="center">
-<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395302430.png" />
+	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395302430.png" />
 </div>
-<div margin="auto">
+
+<!--<div margin="auto">--> 
 <?php 
 	
 	echo form_open_multipart('candystore/create');
@@ -77,16 +81,19 @@ a:visited:hover{
 	if(isset($fileerror))
 		echo $fileerror;	
 ?>
+
 <input type="file" name="userfile" size="20" /><br>
 </div>
+
 <?php 	
 	
 	echo form_submit('submit', 'Create');
 	echo form_close();
 ?>
 <br><br>
-<?php echo '<p><span class="back">' . anchor('candystore/index','Back') . "</span></p>"; 
-		echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
+<?php 
+	echo '<p><span class="back">' . anchor('candystore/index','Back') . "</span></p>"; 
+	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 
 

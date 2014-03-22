@@ -1,7 +1,9 @@
 <html>
 <head>
 
-<?php $bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";?>
+<?php 
+	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
+?>
 <style type="text/css">
 *{
 	font-family:fantasy;
@@ -10,8 +12,7 @@
 }
 
 body{
-	background-image: url('<?php echo $bg; ?>'); 
-	background-attachment: fixed;
+	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
 }
 
 table{
@@ -51,12 +52,13 @@ a:visited:hover{
 </style>
 
 </head>
-<body>  
+<body> 
 <div align="center">
-	<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395518566.png" />
+			<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395518099.png" />
 </div>
-<h4> Sorry, the email did not go through. <br> Please go back and check if your email is entered correctly, otherwise your electronic copy of your receipt will be displayed as is in the previous page. </h4>
 
+
+<h4> Your receipt has been succesfully emailed to you. <br>Please check your email for the electronic copy of the receipt! </h4>
 <?php
 	echo '<p><span class="home">' . anchor('candystore/index',' Back to the Candyshop') . "</p></span>";
 	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';

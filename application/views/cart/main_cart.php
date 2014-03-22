@@ -1,9 +1,7 @@
 <html>
 <head>
 
-<?php 
-	$bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";
-?>
+<?php $bg="http://www.samsung-wallpapers.com/uploads/allimg/130523/1-130523011435.jpg";?>
 <style type="text/css">
 *{
 	font-family:fantasy;
@@ -12,12 +10,14 @@
 }
 
 body{
-	background-image: url('<?php echo $bg; ?>'); background-attachment: fixed;
+	background-image: url('<?php echo $bg; ?>'); 
+	background-attachment: fixed;
 }
 
 table{
 	margin: 0px auto;
 }
+
 p{
 	display:inline;
 }
@@ -25,12 +25,15 @@ p{
 a:hover{
 	color:white;
 }
+
 a:visited{
 	color:#663366;
 }
+
 a:visited:hover{
 	color:white;
 }
+
 .logout{
 	position:absolute;
 	font-size:20px;
@@ -38,6 +41,7 @@ a:visited:hover{
    	right:50;
 
 }
+
 .back{
 
 	background-image: url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
@@ -51,11 +55,13 @@ a:visited:hover{
   	background-repeat: no-repeat;
 	padding-left: 30px;  
 }
+
 .backbutton{
 	width:890px;
 	display:inline;
 	float:left;
 }
+
 .checkoutbutton{
 	display:inline;
 	width:2000px;
