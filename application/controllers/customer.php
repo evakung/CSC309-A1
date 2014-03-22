@@ -105,9 +105,16 @@ class Customer extends CI_Controller{
 	function delete($id){
 		$this->load->model('customer_model');
 		
-		if (isset($id))
+		if (isset($id)){ //TODO delete their orders and theirs order_item
 			$this->customer_model->delete($id);
-		
+			$orderIDs = $this->getOrders($id);
+			if (isset($orderIDs)){ // 
+				foreach ($orderIDs as $orderID){ 	//  Deletes orders & the order Items
+					$this->delete_item($orderID);
+					$this->order_model->delete($orderID);
+				}
+			}
+		}
 		//Then we redirect to the index page again
 		redirect('customer/index', 'refresh');
 	}
