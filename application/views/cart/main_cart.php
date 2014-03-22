@@ -38,6 +38,29 @@ a:visited:hover{
    	right:50;
 
 }
+.back{
+
+	background-image: url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
+}
+
+.vieworder{
+
+	background-image: url('https://www.bendzulla.com/images/help/membership/receipt_button.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
+}
+.backbutton{
+	width:890px;
+	display:inline;
+	float:left;
+}
+.checkoutbutton{
+	display:inline;
+	width:2000px;
+
+}
 </style>
 
 </head>
@@ -72,7 +95,7 @@ a:visited:hover{
 	<tr>
 	  <td><?php echo $items['quantity']; ?></td>
 	  <td>
-		<?php echo $items['name']; ?>
+		<?php echo $items['name']; ?>Year
 
 			<?php if ($this->cart->has_options($items['name']) == TRUE): ?>
 
@@ -110,9 +133,8 @@ a:visited:hover{
 </table>
 <br><br><br>
 <?php 
-	echo "<p>" . anchor('candystore/index','<< Back') . "</p>";
-	echo " | ";
-	echo "<p>" . anchor('shoppingcart/purchase','Final Order Details >>') . "</p>";
+	echo '<div class="backbutton"><p><span class="back">' . anchor('candystore/index','Back') . "</span></p></div>";
+	echo '<div class="checkoutbutton"><p><span class="vieworder">' . anchor('shoppingcart/purchase','Proceed to Checkout') . "<span></p></div>";
 	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 </body>

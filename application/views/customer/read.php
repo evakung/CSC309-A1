@@ -24,6 +24,12 @@ a:hover{
 a:visited{
 	color:#663366;
 }
+.back{
+
+	background-image: url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
+}
 a:visited:hover{
 	color:white;
 }
@@ -33,6 +39,12 @@ a:visited:hover{
 	top:20;
    	right:50;
 
+}
+.back{
+
+	background-image: url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
 }
 </style>
  <div align="center"><img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395363546.png" /></a></div>
@@ -44,7 +56,7 @@ a:visited:hover{
 	echo "<p> Login Username : " . $customer->login . "</p>";
 	echo "<p> Password : " . $customer->password . "</p>";
 	echo "<p> Email : " . $customer->email . "</p>";
-	echo "<p>" . anchor('customer/index','<< Back') . "</p>";
+	echo '<p><span class="back">' . anchor('customer/index','Back') . "</span></p>";
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>	
 

@@ -40,6 +40,13 @@ a:visited:hover{
 
 }
 
+.back{
+
+	background-image: url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
+}
+
 </style>
 
 <div align="center">
@@ -71,8 +78,8 @@ a:visited:hover{
 ?>	
 <br><br>
 <?php
-echo "<p>" . anchor('candystore/index','<< Back') . "</p>";
-echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
+echo '<p><span class="back">' . anchor('candystore/index','Back') . "</span></p>";
+echo '<p><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 </body>
 </html>

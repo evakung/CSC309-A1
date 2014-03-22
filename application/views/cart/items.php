@@ -33,6 +33,28 @@ a:visited:hover{
    	right:50;
 
 }
+.back{
+
+	background-image: url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
+}
+.cart{	
+ 	background-image: url('http://zurametals.com/wp-content/themes/zurametals/images/cart-icon.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
+}
+
+.backbutton{
+	width:890px;
+	display:inline;
+	float:left;
+}
+.cartbutton{
+	display:inline;
+	width:2000px;
+
+}
 </style>
 
 </head>
@@ -90,8 +112,8 @@ a:visited:hover{
 
 </table>
 <br><br>
-<?php echo "<p>" . anchor('candystore/index','<< Back') . "</p>";?>
-<?php echo "<p>" . anchor('shoppingcart/view_shopping_cart','>> View Cart') . "</p>";
+<?php echo '<div class="backbutton"><p><span class="back">' . anchor('candystore/index','Back') . "</span></p></div>";?>
+<?php echo '<div class="cartbutton"><p><span class="cart">' . anchor('shoppingcart/view_shopping_cart','View Shopping Cart') . "</span></p></div>";
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 

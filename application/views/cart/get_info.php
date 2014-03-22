@@ -37,6 +37,13 @@ a:visited:hover{
    	right:50;
 
 }
+.back{
+
+	background-image: url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
+}
+
 </style>
 
 </head>
@@ -73,6 +80,6 @@ if(isset($fileerror))
 	echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 	echo form_submit('submit', 'Submit Payment Information');
 	echo form_close();
-	echo "<br><br><br><p>" . anchor('shoppingcart/view_shopping_cart','<< Back') . "</p>";
+	echo '<br><br><br><p><span class="back">' . anchor('shoppingcart/view_shopping_cart','Back') . "</span></p>";
 
 ?>	

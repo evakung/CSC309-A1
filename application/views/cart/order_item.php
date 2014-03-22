@@ -1,26 +1,3 @@
-<!--<h2>add into cart</h2>
--->
-<div align="center">
-<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395303414.png" /></div>
-<?php 
-	
-
-	echo "<p> ID = " . $product->id . "</p>";
-	echo "<p> NAME = " . $product->name . "</p>";
-	echo "<p> Description = " . $product->description . "</p>";
-	echo "<p> Price = " . $product->price . "</p>";
-	echo "<p><img src='" . base_url() . "images/product/" . $product->photo_url . "' width='100px'/></p>";
-
-	
-	//echo form_open('shoppingcart/get_quantity');
-	//echo form_input('quantity',set_value('quantity'));
-	
-	//echo "<td>" . anchor("shoppingcart/add_into_cart/$product->id",'Order') . "</td>";
-	
-	
-?>	
-
-
 <html>
 <head>
 <?php 
@@ -54,7 +31,37 @@ a:visited:hover{
    	right:50;
 
 }
+
+.back{
+
+	background-image: url('https://cdn1.iconfinder.com/data/icons/basic-tab-bar-icons/20/Back_button.png');
+  	background-repeat: no-repeat;
+	padding-left: 30px;  
+}
+
 </style>
+
+<!--<h2>add into cart</h2>
+-->
+<div align="center">
+<img border="0" src="http://www.snazzyspace.com/banner-creator/banners/1395303414.png" /></div>
+<?php 
+	
+
+	echo "<p> ID = " . $product->id . "</p>";
+	echo "<p> NAME = " . $product->name . "</p>";
+	echo "<p> Description = " . $product->description . "</p>";
+	echo "<p> Price = " . $product->price . "</p>";
+	echo "<p><img src='" . base_url() . "images/product/" . $product->photo_url . "' width='100px'/></p>";
+
+	
+	//echo form_open('shoppingcart/get_quantity');
+	//echo form_input('quantity',set_value('quantity'));
+	
+	//echo "<td>" . anchor("shoppingcart/add_into_cart/$product->id",'Order') . "</td>";
+	
+	
+?>	
 
 
 
@@ -65,9 +72,9 @@ a:visited:hover{
 	<?php if ($fromcart === true):?>
 		<?php echo form_open('shoppingcart/update_cart'); ?>
 		
-		<p>original quantity : <?php echo $quantity?> </p>
+		<p>Original Quantity : <?php echo $quantity?> </p>
 		
-		<h5>Quantity</h5>
+		<h5>Quantity:</h5>
 		<input type="text" name="quantity" value="" size="5" />
 		<br/><br/>
 
@@ -76,7 +83,7 @@ a:visited:hover{
 	
 		<?php echo form_open('shoppingcart/add_to_cart'); ?>
 		
-		<h5>Quantity</h5>
+		<h5>Quantity :</h5>
 		<input type="text" name="quantity" value="" size="5" />
 		<br/><br/>
 		<div><input type="submit" value="Order Now" /></div>
@@ -87,8 +94,8 @@ a:visited:hover{
 </form>
 <br><br>
 <?php
-echo "<p>" . anchor('candystore/index','<< Back') . "</p>";
-echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
+echo '<p><span class="back">'. anchor('candystore/index','Back') . "</span></p>";
+echo '<p><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
 
 </body>
