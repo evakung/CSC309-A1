@@ -59,6 +59,6 @@ a:visited:hover{
 
 <?php echo 
 	anchor('login', 'Login Now');
-	echo '<p><span class="back">' . anchor('customer/index','Back') . "</span></p>";
+	echo '<p><span class="back">' . anchor('login/index','Back') . "</span></p>";
 echo '<p id="icon"><b><span class="logout">' . anchor("login/logout", "Logout") . '</span></p>';
 ?>
